@@ -1,0 +1,423 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from rastros_fauna using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Rastros de Fauna silvestre"
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "metaestat"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Rastros de Fauna silvestre"
+      "cortepixels"	"0"
+      "storymap"	""
+    END # METADATA
+    NAME "rastros_fauna"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Oso andino"
+      EXPRESSION ('[n_comun]'eq'Oso andino')
+      STYLE
+        COLOR 181 77 77
+        OUTLINECOLOR 255 255 255
+        SIZE 16
+        SYMBOL "circle"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Puma"
+      EXPRESSION ('[n_comun]'eq'Puma')
+      STYLE
+        COLOR 181 77 77
+        OUTLINECOLOR 255 255 255
+        SIZE 15
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Leopardo"
+      EXPRESSION ('[n_comun]'eq'Leopardo')
+      STYLE
+        COLOR 181 77 77
+        OUTLINECOLOR 255 255 255
+        SIZE 14
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Ocelote"
+      EXPRESSION ('[n_comun]'eq'Ocelote')
+      STYLE
+        COLOR 181 77 77
+        OUTLINECOLOR 255 255 255
+        SIZE 13
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Puma o leoncillo"
+      EXPRESSION ('[n_comun]'eq'Puma o leoncillo')
+      STYLE
+        COLOR 181 77 77
+        OUTLINECOLOR 255 255 255
+        SIZE 12
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Venado de Cola Blanca"
+      EXPRESSION ('[n_comun]'eq'Venado de Cola Blanca')
+      STYLE
+        COLOR 189 169 104
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Venado Rojo"
+      EXPRESSION ('[n_comun]'eq'Venado Rojo')
+      STYLE
+        COLOR 189 169 104
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zorro Gatuno"
+      EXPRESSION ('[n_comun]'eq'Zorro Gatuno')
+      STYLE
+        COLOR 134 101 36
+        OUTLINECOLOR 255 255 255
+        SIZE 14
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Tigrillo"
+      EXPRESSION ('[n_comun]'eq'Tigrillo')
+      STYLE
+        COLOR 134 101 36
+        OUTLINECOLOR 255 255 255
+        SIZE 12
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Tapir Andino"
+      EXPRESSION ('[n_comun]'eq'Tapir Andino')
+      STYLE
+        COLOR 134 101 36
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Borugo"
+      EXPRESSION ('[n_comun]'eq'Borugo')
+      STYLE
+        COLOR 134 101 36
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Perro de monte"
+      EXPRESSION ('[n_comun]'eq'Perro de monte')
+      STYLE
+        COLOR 134 101 36
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Fara"
+      EXPRESSION ('[n_comun]'eq'Fara')
+      STYLE
+        COLOR 134 101 36
+        OUTLINECOLOR 255 255 255
+        SIZE 4
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Ardilla Roja"
+      EXPRESSION ('[n_comun]'eq'Ardilla Roja')
+      STYLE
+        COLOR 167 48 109
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Mono Maicero"
+      EXPRESSION ('[n_comun]'eq'Mono Maicero')
+      STYLE
+        COLOR 16 242 24
+        OUTLINECOLOR 255 255 255
+        SIZE 13
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Murcielago"
+      EXPRESSION ('[n_comun]'eq'Murcielago')
+      STYLE
+        COLOR 48 41 41
+        OUTLINECOLOR 255 255 255
+        SIZE 13
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Nutria"
+      EXPRESSION ('[n_comun]'eq'Nutria')
+      STYLE
+        COLOR 12 184 246
+        OUTLINECOLOR 255 255 255
+        SIZE 13
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Condor Andino"
+      EXPRESSION ('[n_comun]'eq'Condor Andino')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 19
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Aguila Real de Montana"
+      EXPRESSION ('[n_comun]'eq'Aguila Real de Montana')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 18
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Aguila de Copete"
+      EXPRESSION ('[n_comun]'eq'Aguila de Copete')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 17
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Buitres"
+      EXPRESSION ('[n_comun]'eq'Buitres')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 15
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Chulo, gallinazo negro"
+      EXPRESSION ('[n_comun]'eq'Chulo, gallinazo negro')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 14
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Pava"
+      EXPRESSION ('[n_comun]'eq'Pava')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 12
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Aura gallipavo"
+      EXPRESSION ('[n_comun]'eq'Aura gallipavo')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Kenken"
+      EXPRESSION ('[n_comun]'eq'Kenken')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Mirla Negra"
+      EXPRESSION ('[n_comun]'eq'Mirla Negra')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Chamon Comun"
+      EXPRESSION ('[n_comun]'eq'Chamon Comun')
+      STYLE
+        COLOR 247 224 15
+        OUTLINECOLOR 255 255 255
+        SIZE 4
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Periquito Aliamarillo"
+      EXPRESSION ('[n_comun]'eq'Periquito Aliamarillo')
+      STYLE
+        COLOR 225 182 9
+        OUTLINECOLOR 255 255 255
+        SIZE 2
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Caracol gigante africano"
+      EXPRESSION ('[n_comun]'eq'Caracol gigante africano')
+      STYLE
+        COLOR 236 16 243
+        OUTLINECOLOR 255 255 255
+        SIZE 13
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Guio"
+      EXPRESSION ('[n_comun]'eq'Guio')
+      STYLE
+        COLOR 246 89 49
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Serpiente Talla X"
+      EXPRESSION ('[n_comun]'eq'Serpiente Talla X')
+      STYLE
+        COLOR 246 89 49
+        OUTLINECOLOR 255 255 255
+        SIZE 7
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Talla X"
+      EXPRESSION ('[n_comun]'eq'Talla X')
+      STYLE
+        COLOR 246 89 49
+        OUTLINECOLOR 255 255 255
+        SIZE 4
+        SYMBOL "ponto"
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

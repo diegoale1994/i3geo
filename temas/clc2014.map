@@ -1,0 +1,144 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from clc_2014 using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "arquivodownload"	""
+      "arquivokmz"	""
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"CLC 2014"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "clc2014"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Bosques"
+      EXPRESSION ('[COB_NIVEL2]'eq'Bosques')
+      STYLE
+        COLOR 11 100 16
+        OUTLINECOLOR 11 100 16
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas con vegetacion herbacea y/o arbustiva"
+      EXPRESSION ('[COB_NIVEL2]'eq'Areas con vegetacion herbacea y/o arbustiva')
+      STYLE
+        COLOR 68 201 99
+        OUTLINECOLOR 68 201 99
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas abiertas, sin o con poca vegetacion"
+      EXPRESSION ('[COB_NIVEL2]'eq'Areas abiertas, sin o con poca vegetacion')
+      STYLE
+        COLOR 126 155 29
+        OUTLINECOLOR 126 155 29
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas agricolas heterogeneas"
+      EXPRESSION ('[COB_NIVEL2]'eq'Areas agricolas heterogeneas')
+      STYLE
+        COLOR 43 168 139
+        OUTLINECOLOR 43 168 139
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Aguas Continentales"
+      EXPRESSION ('[COB_NIVEL2]'eq'Aguas Continentales')
+      STYLE
+        COLOR 26 157 245
+        OUTLINECOLOR 26 157 245
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cultivos Transitorios"
+      EXPRESSION ('[COB_NIVEL2]'eq'Cultivos Transitorios')
+      STYLE
+        COLOR 220 153 39
+        OUTLINECOLOR 220 153 39
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cultivos Permanentes"
+      EXPRESSION ('[COB_NIVEL2]'eq'Cultivos Permanentes')
+      STYLE
+        COLOR 195 133 133
+        OUTLINECOLOR 195 133 133
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Pastos"
+      EXPRESSION ('[COB_NIVEL2]'eq'Pastos')
+      STYLE
+        COLOR 177 209 174
+        OUTLINECOLOR 177 209 174
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zonas Urbanizadas"
+      EXPRESSION ('[COB_NIVEL2]'eq'Zonas Urbanizadas')
+      STYLE
+        COLOR 247 210 58
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zonas Industriales o Comerciales y Redes de Comunicacion"
+      EXPRESSION ('[COB_NIVEL2]'eq'Zonas Industriales o Comerciales y Redes de Comunicacion')
+      STYLE
+        COLOR 135 124 43
+        OUTLINECOLOR 135 124 43
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zonas de Extraccion Minera y Escombreras"
+      EXPRESSION ('[COB_NIVEL2]'eq'Zonas de Extraccion Minera y Escombreras')
+      STYLE
+        COLOR 232 68 68
+        OUTLINECOLOR 232 68 68
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Otros"
+      EXPRESSION ('[COB_NIVEL2]'eq'Otros')
+      STYLE
+        COLOR 206 190 190
+        OUTLINECOLOR 206 190 190
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

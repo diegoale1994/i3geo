@@ -1,0 +1,57 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from eparamos using unique gid using srid=4326"
+    METADATA
+      "cache"	"sim"
+      "CLASSE"	"SIM"
+      "permitekmz"	"SIM"
+      "permitedownload"	"NAO"
+      "download"	"NAO"
+      "permitekml"	"SIM"
+      "permiteogc"	"SIM"
+      "TEMA"	"P�ramos"
+      "cortepixels"	"0"
+      "identifica"	"SIM"
+    END # METADATA
+    NAME "paramos"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Cundinamarca"
+      EXPRESSION ('[distrito]'eq'Cundinamarca')
+      STYLE
+        COLOR 12 178 78
+        OUTLINECOLOR 12 178 78
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Altiplano"
+      EXPRESSION ('[distrito]'eq'Altiplano')
+      STYLE
+        COLOR 3 90 3
+        OUTLINECOLOR 3 90 3
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Boyacá"
+      EXPRESSION ('[distrito]'eq'Boyacá')
+      STYLE
+        COLOR 94 97 56
+        OUTLINECOLOR 94 97 56
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

@@ -1,0 +1,72 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from conflicto_uso_2008 using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "mensagem"	"Conflicto del Uso del Suelo (2008)"
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Conflicto del Uso del Suelo (2008)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "conflicto_2008"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "SIN CONFLICTO"
+      EXPRESSION ('[conflicto]'eq'SIN CONFLICTO')
+      STYLE
+        COLOR 189 236 214
+        OUTLINECOLOR 189 236 214
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "NEGATIVO SEVERO"
+      EXPRESSION ('[conflicto]'eq'NEGATIVO SEVERO')
+      STYLE
+        COLOR 242 24 24
+        OUTLINECOLOR 242 24 24
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "NEGATIVO MODERADO"
+      EXPRESSION ('[conflicto]'eq'NEGATIVO MODERADO')
+      STYLE
+        COLOR 236 171 42
+        OUTLINECOLOR 236 171 42
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "NEGATIVO LEVE"
+      EXPRESSION ('[conflicto]'eq'NEGATIVO LEVE')
+      STYLE
+        COLOR 240 238 178
+        OUTLINECOLOR 240 238 178
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

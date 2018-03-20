@@ -1,0 +1,57 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from p_ccg using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"nao"
+      "mensagem"	"Zonificación Páramo Cristales - Castillejo - Guaneque"
+      "permitedownload"	"nao"
+      "download"	"nao"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Zonificación Páramo Cristales - Castillejo - Guaneque"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "drmi_ccg"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Preservacion"
+      EXPRESSION ('[zonifica]'eq'Preservacion')
+      STYLE
+        COLOR 56 201 12
+        OUTLINECOLOR 56 201 12
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Restauracion"
+      EXPRESSION ('[zonifica]'eq'Restauracion')
+      STYLE
+        COLOR 239 112 15
+        OUTLINECOLOR 239 112 15
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Uso Sostenible"
+      EXPRESSION ('[zonifica]'eq'Uso Sostenible')
+      STYLE
+        COLOR 189 230 134
+        OUTLINECOLOR 189 230 134
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

@@ -1,0 +1,53 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from szh_3507 using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "metaestat"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"SZH 3507"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "szh_3507"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 75
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "3507"
+      EXPRESSION ('[szh]'eq'3507')
+      STYLE
+        COLOR 69 129 182
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

@@ -1,0 +1,115 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from titulos_licencias_a using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "metaestat"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Minerales Disponibles"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "titulos_licencias"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Carbón"
+      EXPRESSION ('[minerales]'eq'CARBON')
+      STYLE
+        COLOR 246 81 81
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Materiales de Cosntrucción"
+      EXPRESSION ('[minerales]'eq'MATERIALES DE CONSTRUCCION')
+      STYLE
+        COLOR 206 210 145
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Esmeralda"
+      EXPRESSION ('[minerales]'eq'ESMERALDA')
+      STYLE
+        COLOR 73 218 51
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Roca Fosfórica"
+      EXPRESSION ('[minerales]'eq'ROCA FOSFORICA')
+      STYLE
+        COLOR 239 230 174
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cobre"
+      EXPRESSION ('[minerales]'eq'COBRE')
+      STYLE
+        COLOR 214 219 87
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Yeso"
+      EXPRESSION ('[minerales]'eq'YESO')
+      STYLE
+        COLOR 250 238 238
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Hierro"
+      EXPRESSION ('[minerales]'eq'HIERRO')
+      STYLE
+        COLOR 119 110 110
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Material de Arrastre"
+      EXPRESSION ('[minerales]'eq'MATERIALES DE ARRASTRE')
+      STYLE
+        COLOR 240 231 150
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

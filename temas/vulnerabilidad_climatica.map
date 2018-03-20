@@ -1,0 +1,81 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from vulnerabilidad_climatk using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Vulnerabilidad Climática"
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "metaestat"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Vulnerabilidad Climática"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "vulnerabilidad_climatica"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Muy alta"
+      EXPRESSION ('[vul_clas]'eq'Muy alta')
+      STYLE
+        COLOR 242 23 23
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Alta"
+      EXPRESSION ('[vul_clas]'eq'Alta')
+      STYLE
+        COLOR 252 200 31
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Media"
+      EXPRESSION ('[vul_clas]'eq'Media')
+      STYLE
+        COLOR 20 198 14
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Baja"
+      EXPRESSION ('[vul_clas]'eq'Baja')
+      STYLE
+        COLOR 214 234 220
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

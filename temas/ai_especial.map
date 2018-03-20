@@ -1,0 +1,62 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from aie using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Áreas de Interés Especial"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "ai_especial"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Alta"
+      EXPRESSION ('[importanci]'eq'Alta')
+      STYLE
+        COLOR 40 179 54
+        OUTLINECOLOR 40 179 54
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Media"
+      EXPRESSION ('[importanci]'eq'Media')
+      STYLE
+        COLOR 255 215 0
+        OUTLINECOLOR 255 215 0
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Baja"
+      EXPRESSION ('[importanci]'eq'Baja')
+      STYLE
+        COLOR 243 99 27
+        OUTLINECOLOR 243 99 27
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

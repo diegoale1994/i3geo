@@ -1,0 +1,121 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from infracciones_a using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Infracciones Ambientales"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "infracciones_a"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 95
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "AGUA"
+      EXPRESSION ('[recursos_a]'eq'AGUA')
+      STYLE
+        COLOR 70 209 243
+        OUTLINECOLOR 255 255 255
+        SIZE 18
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "SUELO"
+      EXPRESSION ('[recursos_a]'eq'SUELO')
+      STYLE
+        COLOR 134 94 16
+        OUTLINECOLOR 255 255 255
+        SIZE 16
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "FLORA"
+      EXPRESSION ('[recursos_a]'eq'FLORA')
+      STYLE
+        COLOR 58 193 112
+        OUTLINECOLOR 255 255 255
+        SIZE 14
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "NO REGISTRA"
+      EXPRESSION ('[recursos_a]'eq'NO REGISTRA')
+      STYLE
+        COLOR 175 168 168
+        OUTLINECOLOR 255 255 255
+        SIZE 4
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "AIRE"
+      EXPRESSION ('[recursos_a]'eq'AIRE')
+      STYLE
+        COLOR 224 238 238
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "COBERTURA VEGETAL"
+      EXPRESSION ('[recursos_a]'eq'COBERTURA VEGETAL')
+      STYLE
+        COLOR 21 104 9
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "FAUNA"
+      EXPRESSION ('[recursos_a]'eq'FAUNA')
+      STYLE
+        COLOR 253 27 27
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

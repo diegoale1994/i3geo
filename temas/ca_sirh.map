@@ -1,0 +1,81 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from ca_sirh using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "ltempoitemimagem"	""
+      "cache"	"nao"
+      "ltempoitemdescricao"	""
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "ltempoiteminicio"	""
+      "palletestep"	""
+      "ltempoitemtip"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "ltempoitemtitulo"	""
+      "description_template"	""
+      "iconetema"	""
+      "ltempoitemlink"	""
+      "itenslink"	"\SRVNAS\siat_web\03. Guias"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "palletefile"	""
+      "olstatus"	""
+      "nomeoriginal"	""
+      "ltempoformatodata"	""
+      "permitedownload"	"sim"
+      "ltempoitemicone"	""
+      "FILTROORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "DATAORIGINAL"	""
+      "metaestat"	""
+      "download"	"sim"
+      "itembuscarapida"	"Concesiones"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Concesiones de Agua"
+      "cortepixels"	"0"
+      "ltempoconvencode"	""
+      "editorsql"	""
+      "ltempoitemfim"	""
+    END # METADATA
+    NAME "ca_sirh"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Superficial"
+      EXPRESSION ('[tip_fuen2]'eq'Superficial')
+      STYLE
+        COLOR 17 48 252
+        OUTLINECOLOR 255 255 255
+        SIZE 12
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Subterranea"
+      EXPRESSION ('[tip_fuen2]'eq'Subterranea')
+      STYLE
+        COLOR 89 163 236
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

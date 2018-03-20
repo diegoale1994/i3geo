@@ -1,0 +1,38 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from defor_2000_2005 using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"nao"
+      "mensagem"	"DeforestaciÛn (2000 - 2005)"
+      "permitedownload"	"nao"
+      "download"	"nao"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"DeforestaciÛn (2000 - 2005)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "defor_2000_2005"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "√Åreas identificadas"
+      STYLE
+        COLOR 236 100 42
+        OUTLINECOLOR 236 100 42
+        SIZE 12
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

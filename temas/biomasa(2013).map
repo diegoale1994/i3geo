@@ -1,0 +1,74 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from biomasa using unique gid using srid=4326"
+    METADATA
+      "cache"	"sim"
+      "CLASSE"	"SIM"
+      "permitekmz"	"SIM"
+      "permitedownload"	"NAO"
+      "download"	"NAO"
+      "permitekml"	"SIM"
+      "permiteogc"	"SIM"
+      "tema"	"Biomasa (2013)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "biomasa(2013)"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "<= que 70"
+      EXPRESSION ([CARBONO]<=70)
+      STYLE
+        COLOR 206 14 14
+        OUTLINECOLOR 206 14 14
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "> 70 e <= que 110"
+      EXPRESSION (([CARBONO]>70)and([CARBONO]<=110))
+      STYLE
+        COLOR 238 90 37
+        OUTLINECOLOR 238 90 37
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "> 110 e <= que 153"
+      EXPRESSION (([CARBONO]>110)and([CARBONO]<=153))
+      STYLE
+        COLOR 125 213 92
+        OUTLINECOLOR 125 213 92
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "> 153 e <= que 216"
+      EXPRESSION (([CARBONO]>153)and([CARBONO]<=216))
+      STYLE
+        COLOR 165 223 167
+        OUTLINECOLOR 165 223 167
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME ">= que 216"
+      EXPRESSION ([CARBONO] >=216)
+      STYLE
+        COLOR 16 144 46
+        OUTLINECOLOR 16 144 46
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

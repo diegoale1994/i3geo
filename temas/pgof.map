@@ -1,0 +1,117 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from pgof using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "mensagem"	"Plan General de Ordenación Forestal (zonificación)"
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Plan General de Ordenación Forestal (zonificación)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "pgof"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "AREA FORESTAL DE PROTECCION PARA LA PRESERVACION"
+      EXPRESSION ('[zonifica]'eq'AREA FORESTAL DE PROTECCION PARA LA PRESERVACION')
+      STYLE
+        COLOR 9 183 44
+        OUTLINECOLOR 9 183 44
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "AREA FORESTAL DE PROTECCION PARA LA RESTAURACION"
+      EXPRESSION ('[zonifica]'eq'AREA FORESTAL DE PROTECCION PARA LA RESTAURACION')
+      STYLE
+        COLOR 236 172 21
+        OUTLINECOLOR 236 172 21
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "AREA FORESTAL DE PROTECCION PARA PARA EL USO SOSTENIBLE"
+      EXPRESSION ('[zonifica]'eq'AREA FORESTAL DE PROTECCION PARA PARA EL USO SOSTENIBLE')
+      STYLE
+        COLOR 220 247 195
+        OUTLINECOLOR 220 247 195
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "AREA DE USO MULTIPLE CON POTENCIAL FORESTAL"
+      EXPRESSION ('[zonifica]'eq'AREA DE USO MULTIPLE CON POTENCIAL FORESTAL')
+      STYLE
+        COLOR 6 102 32
+        OUTLINECOLOR 6 102 32
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "AREA FORESTAL DE PRODUCCION DIRECTA"
+      EXPRESSION ('[zonifica]'eq'AREA FORESTAL DE PRODUCCION DIRECTA')
+      STYLE
+        COLOR 115 176 174
+        OUTLINECOLOR 115 176 174
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "AREA FORESTAL DE PRODUCCION INDIRECTA"
+      EXPRESSION ('[zonifica]'eq'AREA FORESTAL DE PRODUCCION INDIRECTA')
+      STYLE
+        COLOR 250 250 86
+        OUTLINECOLOR 250 250 86
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "PARAMOS"
+      EXPRESSION ('[zonifica]'eq'PARAMOS')
+      STYLE
+        COLOR 228 36 242
+        OUTLINECOLOR 228 36 242
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "DISTRITO REGIONAL DE MANEJO INTEGRAL"
+      EXPRESSION ('[zonifica]'eq'DISTRITO REGIONAL DE MANEJO INTEGRAL')
+      STYLE
+        COLOR 152 23 161
+        OUTLINECOLOR 152 23 161
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "INFRAESTRUCTURA CONSTRUIDA"
+      EXPRESSION ('[zonifica]'eq'INFRAESTRUCTURA CONSTRUIDA')
+      STYLE
+        COLOR 112 79 79
+        OUTLINECOLOR 112 79 79
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

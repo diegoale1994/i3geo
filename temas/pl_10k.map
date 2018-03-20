@@ -1,0 +1,69 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from pl_10k using unique gid using srid=4326"
+    GROUP "Distribución Planchas a 10K"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "TIP"	"plancha"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "ITENSDESC"	"plancha"
+      "ITENSLINK"	"http://ssiglwps.igac.gov.co/ssigl2.0/visor/galeria.req?mapaId=7"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "metaestat"	""
+      "download"	"sim"
+      "itembuscarapida"	"plancha"
+      "ITENS"	"plancha"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Distribución Planchas a 10K"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "pl_10k"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME " "
+      LABEL
+        FONT "arial"
+        SIZE 8
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[plancha]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 176 196 222
+        OUTLINECOLOR 255 255 255
+        SIZE 12
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

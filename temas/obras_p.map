@@ -1,0 +1,139 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from obras_prevencion using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "mensagem"	"Obras de mitigación"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Obras de mitigación"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "obras_p"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Menor a $21.669.800"
+      EXPRESSION ([COSTO_PROY]<=21669800)
+      STYLE
+        COLOR 53 22 139
+        OUTLINECOLOR 255 255 255
+        SIZE 4
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$21.669.800 - $45.101.300"
+      EXPRESSION (([COSTO_PROY]>21669800)and([COSTO_PROY]<=45101300))
+      STYLE
+        COLOR 43 112 8
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$45.101.300 - $70.666.600"
+      EXPRESSION (([COSTO_PROY]>45101300)and([COSTO_PROY]<=70666600))
+      STYLE
+        COLOR 77 72 236
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$70.666.600 - $88.585.700"
+      EXPRESSION (([COSTO_PROY]>70666600)and([COSTO_PROY]<=88585700))
+      STYLE
+        COLOR 22 135 20
+        OUTLINECOLOR 255 255 255
+        SIZE 12
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$88.585.700 - $120.820.000"
+      EXPRESSION (([COSTO_PROY]>88585700)and([COSTO_PROY]<=120820000))
+      STYLE
+        COLOR 87 238 110
+        OUTLINECOLOR 255 255 255
+        SIZE 14
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$120.820.000 - $149.922.000"
+      EXPRESSION (([COSTO_PROY]>120820000)and([COSTO_PROY]<=149922000))
+      STYLE
+        COLOR 31 200 62
+        OUTLINECOLOR 255 255 255
+        SIZE 16
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$149.922.000 - $205.087.000"
+      EXPRESSION (([COSTO_PROY]>149922000)and([COSTO_PROY]<=205087000))
+      STYLE
+        COLOR 69 213 195
+        OUTLINECOLOR 255 255 255
+        SIZE 18
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$205.087.000 - $253.375.000"
+      EXPRESSION (([COSTO_PROY]>205087000)and([COSTO_PROY]<=253375000))
+      STYLE
+        COLOR 186 213 28
+        OUTLINECOLOR 255 255 255
+        SIZE 20
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "$253.375.000 - $513.062.000"
+      EXPRESSION (([COSTO_PROY]>253375000)and([COSTO_PROY]<=513062000))
+      STYLE
+        COLOR 10 16 168
+        OUTLINECOLOR 255 255 255
+        SIZE 22
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Hasta $513.062.000"
+      EXPRESSION ([COSTO_PROY] >=513062000)
+      STYLE
+        COLOR 10 131 90
+        OUTLINECOLOR 255 255 255
+        SIZE 24
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

@@ -1,0 +1,76 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from estaciones_hidro using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Estaciones Hidrológicas"
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "PLUGINI3GEO"	""
+      "DATAORIGINAL"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Estaciones Hidrológicas"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "estacion_hidro"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "CORPOCHIVOR -IDEAM"
+      EXPRESSION ('[propiedad]'eq'CORPOCHIVOR -IDEAM')
+      STYLE
+        COLOR 56 70 204
+        OUTLINECOLOR 255 255 255
+        SIZE 13
+        SYMBOL "industria"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "CORPOCHIVOR"
+      EXPRESSION ('[propiedad]'eq'CORPOCHIVOR')
+      STYLE
+        COLOR 105 152 223
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "quadrado"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "AES CHIVOR"
+      EXPRESSION ('[propiedad]'eq'AES CHIVOR')
+      STYLE
+        COLOR 54 163 236
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "triangulo"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

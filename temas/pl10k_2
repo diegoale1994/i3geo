@@ -1,0 +1,74 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom FROM pl10k_2 using unique gid using SRID=-1"
+    METADATA
+      "cache"	"SIM"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "tiles"	"SIM"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "convcaracter"	"SIM"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "PLANCHA"
+    STATUS DEFAULT
+    TEMPLATE "legenda2.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME ""
+      STYLE
+        COLOR 0 0 0
+        SIZE 12
+      END # STYLE
+    END # CLASS
+  END # LAYER
+END # MAP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

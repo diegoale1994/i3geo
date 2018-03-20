@@ -1,0 +1,54 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from suelo_desertifica using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "mensagem"	"Susceptibilidad desertificación"
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Susceptibilidad desertificación"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "suceptibilidad_desertificacion"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Moderado"
+      EXPRESSION ('[desertific]'eq'Moderado')
+      STYLE
+        COLOR 236 14 14
+        OUTLINECOLOR 236 14 14
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Bajo"
+      EXPRESSION ('[desertific]'eq'Suceptible')
+      STYLE
+        COLOR 242 203 11
+        OUTLINECOLOR 242 203 11
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

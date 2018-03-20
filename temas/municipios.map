@@ -1,0 +1,54 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from municipios using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Municipios"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "municipios"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "BOYACÁ"
+      EXPRESSION ('[nom_dpto]'eq'BOYACÁ')
+      LABEL
+        FONT "FreeSerif"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nom_mpio]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 148 148 115
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

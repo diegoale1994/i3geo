@@ -1,0 +1,79 @@
+<div class='yui-navset' style='top: 0px; cursor: pointer; left: 0px;'>
+	<ul class='yui-nav' style='border-width: 0pt 0pt 0px; border-color: rgb(240, 240, 240); border-bottom-color: white;'>
+		<li>
+			<div id='i3GEOpontosDistriguia1' style='text-align: center; left: 0px;'>
+				<a> <em>{{{calculo}}}</em>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div id='i3GEOpontosDistriguia2' style='text-align: center; left: 0px;'>
+				<a> <em>{{{propriedades}}}</em>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+<br>
+<div class='guiaobj' id='i3GEOpontosDistriguia1obj' style='left: 1px; display: none;'>
+	<p class='paragrafo'>{{{selecionaTema}}}</p>
+	<div class='styled-select' id='i3GEOpontosDistriTemas'></div>
+	<br>
+	<p class='paragrafo'>{{{restringeAnalise}}}</p>
+	<div class='styled-select'>{{{limitePontos}}}</div>
+	<br>
+	<p class='paragrafo'>{{{extendeAbrangencia}}}</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' id='i3GEOpontosDistriextendelimite' value='10' />
+		%
+	</div>
+	<br>
+	<p class='paragrafo'>
+		<input id='i3GEOpontosDistribotao1' size='35' type='button' value='{{{densidadePontos}}}' />
+	</p>
+	<p class='paragrafo'>
+		<input id='i3GEOpontosDistribotao2' size='35' type='button' value='{{{distanciaPontos}}}' />
+	</p>
+	<p class='paragrafo'>
+		<input id='i3GEOpontosDistribotaokernel' size='35' type='button' value='Kernel' />
+	</p>
+	<p class='paragrafo'>{{{desvioPadrao}}}</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' id='i3GEOpontosDistrisigma' value='' />
+		N
+	</div>
+	<br>
+	<p class='paragrafo'>
+		<input id='i3GEOpontosDistribotaodeldir' size='35' type='button' value='Delaunay/Voronoi' />
+	</p>
+	<p class='paragrafo'>
+		<input id='i3GEOpontosDistribotao3' size='35' type='button' value='{{{relatorio}}}' />
+	</p>
+	<div id='i3GEOpontosDistriresultado' style='display: none; position: relative; top: 10px; left: 0px;'></div>
+</div>
+<input type='hidden' id='i3GEOpontosDistrilistadeitens' value='' />
+<input type='hidden' id='i3GEOpontosDistritema' value='' />
+<div class='guiaobj' id='i3GEOpontosDistriguia2obj' style='left: 1px; display: none;'>
+	<p class='paragrafo'>{{{opcoesCoresClasses}}}</p>
+	<br>
+	<p class='paragrafo'>{{{numeroClasses}}}</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' id='i3GEOpontosDistrinumclasses' value='50' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{corInicial}}}</p>
+	<div class='i3geoForm100 i3geoFormIconeAquarela'>
+		<input type='text' id='i3GEOpontosDistricori' value='0,0,0' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{corFinal}}}</p>
+	<div class='i3geoForm100 i3geoFormIconeAquarela'>
+		<input type='text' id='i3GEOpontosDistricorf' value='255,255,255' />
+	</div>
+	<br>
+	<p class='paragrafo'>
+		<input id='i3GEOpontosDistribotao4' size='15' type='button' value='{{{verCor}}}' />
+	</p>
+	<div id='i3GEOpontosDistrimostracores' style='display: block;'></div>
+</div>
+<div class='guiaobj' id='i3GEOpontosDistriguia3obj' style='left: 1px; display: none;'></div>

@@ -1,0 +1,117 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from amenaza_rural using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "mensagem"	"Amenaza Rural"
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Amenaza Rural"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "amenaza_rural"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Zonas potencialmente estables"
+      EXPRESSION ('[nom_amena]'eq'Zonas potencialmente estables')
+      STYLE
+        COLOR 176 240 171
+        OUTLINECOLOR 176 240 171
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zonas con baja potencialidad a la inestabilidad"
+      EXPRESSION ('[nom_amena]'eq'Zonas con baja potencialidad a la i')
+      STYLE
+        COLOR 236 220 113
+        OUTLINECOLOR 236 220 113
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zonas inestables"
+      EXPRESSION ('[nom_amena]'eq'Zonas inestables')
+      STYLE
+        COLOR 240 19 19
+        OUTLINECOLOR 240 19 19
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zonas potencialmente inestables"
+      EXPRESSION ('[nom_amena]'eq'Zonas potencialmente inestables')
+      STYLE
+        COLOR 233 171 26
+        OUTLINECOLOR 233 171 26
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Urbano"
+      EXPRESSION ('[nom_amena]'eq'Urbano')
+      STYLE
+        COLOR 204 51 174
+        OUTLINECOLOR 204 51 174
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Lagos"
+      EXPRESSION ('[nom_amena]'eq'Lagos')
+      STYLE
+        COLOR 45 57 220
+        OUTLINECOLOR 45 57 220
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Rios"
+      EXPRESSION ('[nom_amena]'eq'Rios')
+      STYLE
+        COLOR 24 72 229
+        OUTLINECOLOR 24 72 229
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Embalse"
+      EXPRESSION ('[nom_amena]'eq'Embalse')
+      STYLE
+        COLOR 27 170 242
+        OUTLINECOLOR 27 170 242
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Barras"
+      EXPRESSION ('[nom_amena]'eq'Barras')
+      STYLE
+        COLOR 220 205 102
+        OUTLINECOLOR 220 205 102
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

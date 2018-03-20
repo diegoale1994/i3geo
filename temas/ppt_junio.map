@@ -1,0 +1,111 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from ppt_junio_1980_2010 using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "mensagem"	"Precipitación media multianual (Enero, 1981 - 2010)"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Precipitación media multianual (Enero, 1981 - 2010)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "ppt_junio"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "30 - 80"
+      EXPRESSION ('[rango]'eq'30 - 80')
+      STYLE
+        COLOR 7 104 36
+        OUTLINECOLOR 7 104 36
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "81 - 150"
+      EXPRESSION ('[rango]'eq'81 - 150')
+      STYLE
+        COLOR 35 164 43
+        OUTLINECOLOR 35 164 43
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "151 - 200"
+      EXPRESSION ('[rango]'eq'151 - 200')
+      STYLE
+        COLOR 148 206 177
+        OUTLINECOLOR 148 206 177
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "201 - 250"
+      EXPRESSION ('[rango]'eq'201 - 250')
+      STYLE
+        COLOR 216 233 175
+        OUTLINECOLOR 216 233 175
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "251 - 300"
+      EXPRESSION ('[rango]'eq'251 - 300')
+      STYLE
+        COLOR 153 158 17
+        OUTLINECOLOR 153 158 17
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "301 - 400"
+      EXPRESSION ('[rango]'eq'301 - 400')
+      STYLE
+        COLOR 197 208 100
+        OUTLINECOLOR 197 208 100
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "401 - 550"
+      EXPRESSION ('[rango]'eq'401 - 550')
+      STYLE
+        COLOR 236 234 161
+        OUTLINECOLOR 236 234 161
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "551 - 600"
+      EXPRESSION ('[rango]'eq'551 - 600')
+      STYLE
+        COLOR 239 239 21
+        OUTLINECOLOR 239 239 21
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "601 - 700"
+      EXPRESSION ('[rango]'eq'601 - 700')
+      STYLE
+        COLOR 236 156 17
+        OUTLINECOLOR 236 156 17
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

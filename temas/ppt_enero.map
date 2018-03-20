@@ -1,0 +1,129 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from ppt_enero_1980_2010 using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "mensagem"	"Precipitación media multianual (Junio, 1981 - 2010)"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Precipitación media multianual (Junio, 1981 - 2010)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "ppt_enero"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "0 - 15"
+      EXPRESSION ('[rango]'eq'0 - 15')
+      STYLE
+        COLOR 7 104 36
+        OUTLINECOLOR 7 104 36
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "16 - 20"
+      EXPRESSION ('[rango]'eq'16 - 20')
+      STYLE
+        COLOR 35 164 43
+        OUTLINECOLOR 35 164 43
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "21 - 25"
+      EXPRESSION ('[rango]'eq'21 - 25')
+      STYLE
+        COLOR 148 206 177
+        OUTLINECOLOR 148 206 177
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "26 - 30"
+      EXPRESSION ('[rango]'eq'26 - 30')
+      STYLE
+        COLOR 216 233 175
+        OUTLINECOLOR 216 233 175
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "31 - 35"
+      EXPRESSION ('[rango]'eq'31 - 35')
+      STYLE
+        COLOR 153 158 17
+        OUTLINECOLOR 153 158 17
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "36 - 40"
+      EXPRESSION ('[rango]'eq'36 - 40')
+      STYLE
+        COLOR 197 208 100
+        OUTLINECOLOR 197 208 100
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "41 - 45"
+      EXPRESSION ('[rango]'eq'41 - 45')
+      STYLE
+        COLOR 236 234 161
+        OUTLINECOLOR 236 234 161
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "46 - 50"
+      EXPRESSION ('[rango]'eq'46 - 50')
+      STYLE
+        COLOR 239 239 21
+        OUTLINECOLOR 239 239 21
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "51 - 55"
+      EXPRESSION ('[rango]'eq'51 - 55')
+      STYLE
+        COLOR 236 156 17
+        OUTLINECOLOR 236 156 17
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "56 - 60"
+      EXPRESSION ('[rango]'eq'56 - 60')
+      STYLE
+        COLOR 223 26 26
+        OUTLINECOLOR 223 26 26
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "61 - 65"
+      EXPRESSION ('[rango]'eq'61 - 65')
+      STYLE
+        COLOR 128 6 6
+        OUTLINECOLOR 128 6 6
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

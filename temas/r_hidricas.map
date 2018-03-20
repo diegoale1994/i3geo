@@ -1,0 +1,75 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from r_hidricas using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "mensagem"	"Rondas Hídricas"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Rondas Hídricas"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "r_hidricas"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 70
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Río Jenesano (20 Km)"
+      EXPRESSION ('[nombre]'eq'Rio Jenesano (20 Km)')
+      STYLE
+        COLOR 15 35 240
+        OUTLINECOLOR 15 35 240
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Río Boyaca - Jenesano"
+      EXPRESSION ('[nombre]'eq'Rio Boyaca - Jenesano')
+      STYLE
+        COLOR 15 35 240
+        OUTLINECOLOR 15 35 240
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Río Bosque (Sector Alto)"
+      EXPRESSION ('[nombre]'eq'Rio Bosque (Sector Alto)')
+      STYLE
+        COLOR 15 35 240
+        OUTLINECOLOR 15 35 240
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Río Garagoa (Sector La Frontera)"
+      EXPRESSION ('[nombre]'eq'Rio Garagoa (Sector La Frontera)')
+      STYLE
+        COLOR 15 35 240
+        OUTLINECOLOR 15 35 240
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Río Súnuba (Sector Salitre)"
+      EXPRESSION ('[nombre]'eq'Rio Sunuba (Sector Salitre)')
+      STYLE
+        COLOR 15 35 240
+        OUTLINECOLOR 15 35 240
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

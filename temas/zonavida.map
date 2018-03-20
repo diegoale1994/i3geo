@@ -1,0 +1,147 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from zovida using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"SIM"
+      "temporizador"	""
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"NAO"
+      "FILTROORIGINAL"	""
+      "permitecomentario"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "metaestat"	""
+      "download"	"NAO"
+      "arquivokmz"	""
+      "arquivodownload"	""
+      "permitekml"	"SIM"
+      "permiteogc"	"SIM"
+      "tema"	"Zonas de Vida"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "zonavida"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 60
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "BOSQUE HUMEDO MONTANO"
+      EXPRESSION ('[tipo]'eq'BOSQUE HUMEDO MONTANO')
+      STYLE
+        COLOR 10 156 235
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE HUMEDO MONTANO BAJO"
+      EXPRESSION ('[tipo]'eq'BOSQUE HUMEDO MONTANO BAJO')
+      STYLE
+        COLOR 86 247 74
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE HUMEDO PREMONTANO"
+      EXPRESSION ('[tipo]'eq'BOSQUE HUMEDO PREMONTANO')
+      STYLE
+        COLOR 44 189 29
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE HUMEDO TROPICAL"
+      EXPRESSION ('[tipo]'eq'BOSQUE HUMEDO TROPICAL')
+      STYLE
+        COLOR 51 210 24
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE MUY HUMEDO MONTANO"
+      EXPRESSION ('[tipo]'eq'BOSQUE MUY HUMEDO MONTANO')
+      STYLE
+        COLOR 41 51 166
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE MUY HUMEDO MONTANO BAJO"
+      EXPRESSION ('[tipo]'eq'BOSQUE MUY HUMEDO MONTANO BAJO')
+      STYLE
+        COLOR 122 165 69
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE PLUVIAL PREMONTANO"
+      EXPRESSION ('[tipo]'eq'BOSQUE PLUVIAL PREMONTANO')
+      STYLE
+        COLOR 190 101 71
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE MUY HUMEDO PREMONTANO"
+      EXPRESSION ('[tipo]'eq'BOSQUE MUY HUMEDO PREMONTANO')
+      STYLE
+        COLOR 90 228 206
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE MUY HUMEDO TROPICAL"
+      EXPRESSION ('[tipo]'eq'BOSQUE MUY HUMEDO TROPICAL')
+      STYLE
+        COLOR 145 99 72
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE PLUVIAL MONTANO"
+      EXPRESSION ('[tipo]'eq'BOSQUE PLUVIAL MONTANO')
+      STYLE
+        COLOR 236 60 100
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "BOSQUE SECO MONTANO BAJO"
+      EXPRESSION ('[tipo]'eq'BOSQUE SECO MONTANO BAJO')
+      STYLE
+        COLOR 219 130 85
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

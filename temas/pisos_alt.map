@@ -1,0 +1,79 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from piososal using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"SIM"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"SIM"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"NAO"
+      "arquivokmz"	""
+      "arquivodownload"	""
+      "permitekml"	"SIM"
+      "permiteogc"	"SIM"
+      "tema"	"Pisos Altitudinales"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "pisos_alt"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 75
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "3000-4000"
+      EXPRESSION ('[altura]'eq'3000-4000')
+      STYLE
+        COLOR 105 240 222
+        OUTLINECOLOR 105 240 222
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "2000-3000"
+      EXPRESSION ('[altura]'eq'2000-3000')
+      STYLE
+        COLOR 95 193 250
+        OUTLINECOLOR 95 193 250
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "1000-2000"
+      EXPRESSION ('[altura]'eq'1000-2000')
+      STYLE
+        COLOR 233 182 148
+        OUTLINECOLOR 233 182 148
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "0-1000"
+      EXPRESSION ('[altura]'eq'0-1000')
+      STYLE
+        COLOR 236 139 73
+        OUTLINECOLOR 236 139 73
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

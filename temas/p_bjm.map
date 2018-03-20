@@ -1,0 +1,69 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from p_bm using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"nao"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Zonificación Páramos de Bijagual - Mamapacha"
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"nao"
+      "FILTROORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "DATAORIGINAL"	""
+      "download"	"nao"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Zonificación Páramos de Bijagual - Mamapacha"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "p_bjm"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Preservacion"
+      EXPRESSION ('[zonifica]'eq'Preservacion')
+      STYLE
+        COLOR 56 201 12
+        OUTLINECOLOR 56 201 12
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Restauracion"
+      EXPRESSION ('[zonifica]'eq'Restauracion')
+      STYLE
+        COLOR 239 112 15
+        OUTLINECOLOR 239 112 15
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Subzona para el desarrollo"
+      EXPRESSION ('[zonifica]'eq'Subzona para el desarrollo')
+      STYLE
+        COLOR 181 249 181
+        OUTLINECOLOR 181 249 181
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

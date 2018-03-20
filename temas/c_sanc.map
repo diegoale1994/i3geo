@@ -1,0 +1,81 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from c_scy using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Zonificación Cuchilla de San Cayetano"
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Zonificación Cuchilla de San Cayetano"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "c_sanc"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Preservacion"
+      EXPRESSION ('[zonifica]'eq'Preservacion')
+      STYLE
+        COLOR 56 201 12
+        OUTLINECOLOR 56 201 12
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Restauracion"
+      EXPRESSION ('[zonifica]'eq'Restauracion')
+      STYLE
+        COLOR 239 112 15
+        OUTLINECOLOR 239 112 15
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Uso para el desarrollo"
+      EXPRESSION ('[zonifica]'eq'Uso para el desarrollo')
+      STYLE
+        COLOR 230 198 35
+        OUTLINECOLOR 230 198 35
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Uso sostenible"
+      EXPRESSION ('[zonifica]'eq'Uso sostenible')
+      STYLE
+        COLOR 213 242 180
+        OUTLINECOLOR 213 242 180
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

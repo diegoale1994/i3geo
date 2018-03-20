@@ -1,0 +1,62 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from bosq using unique gid using srid=4326"
+    GROUP "Biodiversidad"
+    METADATA
+      "cache"	"sim"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"SIM"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "arquivotemaoriginal"	""
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"SIM"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"NAO"
+      "arquivodownload"	""
+      "arquivokmz"	""
+      "permitekml"	"SIM"
+      "permiteogc"	"SIM"
+      "tema"	"Bosques (2013)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "bosques"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 75
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Denso"
+      EXPRESSION ('[tipo]'eq'Denso')
+      STYLE
+        COLOR 81 138 8
+        OUTLINECOLOR 81 138 8
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Fragmentado"
+      EXPRESSION ('[tipo]'eq'Fragmentado')
+      STYLE
+        COLOR 148 255 140
+        OUTLINECOLOR 148 255 140
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

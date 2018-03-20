@@ -1,0 +1,140 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from ecosistemas using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"SIM"
+      "gmopacity"	""
+      "gmstatus"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"NAO"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"NAO"
+      "permitekml"	"SIM"
+      "permiteogc"	"SIM"
+      "tema"	"Ecosistemas Estratégicos"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "ecosistemase"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 70
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "DRMI PARAMO DE RABANAL"
+      EXPRESSION ('[nombre]'eq'DRMI PARAMO DE RABANAL')
+      STYLE
+        COLOR 10 64 14
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "DRMI CRISTALES - CASTILLEJO - GUACHANEQUE"
+      EXPRESSION ('[nombre]'eq'DRMI CRISTALES - CASTILLEJO - GUACHANEQUE')
+      STYLE
+        COLOR 42 139 27
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "DRMI CUCHILLA NEGRA-GUANEQUE"
+      EXPRESSION ('[nombre]'eq'DRMI CUCHILLA NEGRA-GUANEQUE')
+      STYLE
+        COLOR 58 202 82
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "DRMI CUCHILLA SAN CAYETANO"
+      EXPRESSION ('[nombre]'eq'DRMI CUCHILLA SAN CAYETANO')
+      STYLE
+        COLOR 142 222 129
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "DRMI PARAMO MAMAPACHA-BIJAGUAL"
+      EXPRESSION ('[nombre]'eq'DRMI PARAMO MAMAPACHA-BIJAGUAL')
+      STYLE
+        COLOR 166 208 159
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Mesa Alta (En proceso)"
+      EXPRESSION ('[nombre]'eq'Mesa Alta')
+      STYLE
+        COLOR 245 218 43
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cuchilla El Varal (En proceso)"
+      EXPRESSION ('[nombre]'eq'Cuchilla El Varal')
+      STYLE
+        COLOR 245 218 43
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cuchilla Calichana"
+      EXPRESSION ('[nombre]'eq'Cuchilla Calichana')
+      STYLE
+        COLOR 209 170 64
+        OUTLINECOLOR 255 255 255
+        SYMBOL "p3"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Alto La Aguja"
+      EXPRESSION ('[nombre]'eq'Alto La Aguja')
+      STYLE
+        COLOR 189 173 30
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cuchilla Buenavista"
+      EXPRESSION ('[nombre]'eq'Cuchilla Buenavista')
+      STYLE
+        COLOR 192 143 45
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cuchilla San Agustin"
+      EXPRESSION ('[nombre]'eq'Cuchilla San Agustin')
+      STYLE
+        COLOR 174 122 35
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

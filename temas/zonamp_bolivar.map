@@ -1,0 +1,72 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from zonampbolivar using unique gid using srid=4326"
+    GROUP "AMP Cayo Bolívar"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"AMP Cayo Bolívar"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "zonamp_bolivar"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "No entry (PreservaciÃ³n)"
+      EXPRESSION ('[zone]'eq'No entry')
+      STYLE
+        COLOR 216 28 28
+        OUTLINECOLOR 255 255 255
+        SYMBOL "p4"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "No take (ConservaciÃ³n)"
+      EXPRESSION ('[zone]'eq'No take')
+      STYLE
+        COLOR 73 172 24
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Artisanal fishing (Pesca Artesanal)"
+      EXPRESSION ('[zone]'eq'Artisanal fishing')
+      STYLE
+        COLOR 20 90 182
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

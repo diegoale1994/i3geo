@@ -1,0 +1,80 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from pomca3 using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"SIM"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Zonificación POMCA Río Garagoa (3507)"
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"NAO"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"NAO"
+      "arquivokmz"	""
+      "arquivodownload"	""
+      "permiteogc"	"SIM"
+      "permitekml"	"SIM"
+      "tema"	"Zonificación POMCA Río Garagoa (3507)"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "pomca3507"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Conservacion"
+      EXPRESSION ('[za_pomca]'eq'Conservacion')
+      STYLE
+        COLOR 93 188 21
+        OUTLINECOLOR 93 188 21
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Recuperacion"
+      EXPRESSION ('[za_pomca]'eq'Recuperacion')
+      STYLE
+        COLOR 235 22 22
+        OUTLINECOLOR 235 22 22
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Restauracion"
+      EXPRESSION ('[za_pomca]'eq'Restauracion')
+      STYLE
+        COLOR 246 201 21
+        OUTLINECOLOR 246 201 21
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Uso"
+      EXPRESSION ('[za_pomca]'eq'Uso')
+      STYLE
+        COLOR 213 245 194
+        OUTLINECOLOR 213 245 194
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

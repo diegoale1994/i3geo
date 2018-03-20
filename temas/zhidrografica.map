@@ -1,0 +1,116 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from zhidrografica using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "ITENSDESC"	"nomszh"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "ITENS"	"nomszh"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Subzonas Hidrogr�ficas"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "zhidrografica"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 75
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Río Garagoa"
+      EXPRESSION ('[nomszh]'eq'Río Garagoa')
+      LABEL
+        FONT "FreeSerif"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nomszh]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 57 134 193
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Río Lengupá"
+      EXPRESSION ('[nomszh]'eq'Río Lengupá')
+      LABEL
+        FONT "FreeSerif"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nomszh]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 120 220 240
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Río Upía"
+      EXPRESSION ('[nomszh]'eq'Río Upía')
+      LABEL
+        FONT "FreeSerif"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nomszh]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 107 185 219
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Río Guavio"
+      EXPRESSION ('[nomszh]'eq'Río Guavio')
+      LABEL
+        FONT "FreeSerif"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nomszh]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 164 218 238
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

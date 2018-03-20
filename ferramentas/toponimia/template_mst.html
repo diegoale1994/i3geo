@@ -1,0 +1,171 @@
+<div id='i3GEOtoponimiaguiasYUI' class='yui-navset' style='top: 0px; cursor: pointer; left: 0px;'>
+	<ul class='yui-nav' style='border-width: 0pt 0pt 0px; border-color: rgb(240, 240, 240); border-bottom-color: white;'>
+		<li>
+			<div id='i3GEOtoponimiaguia1' style='text-align: center; left: 0px;'>
+				<a> <em>{{{fonteDados}}}</em>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div id='i3GEOtoponimiaguia2' style='text-align: center; left: 0px;'>
+				<a> <em>{{{propriedades}}}</em>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div id='i3GEOtoponimiaguia3' style='text-align: center; left: 0px;'>
+				<a> <em>{{{testa}}}</em>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+<br>
+<div class='guiaobj' id='i3GEOtoponimiaguia1obj' style='left: 1px; 90%; display: none;'>
+	<p class='paragrafo'>
+		{{{selecionaItem}}}<br>
+	<div id='i3GEOtoponimiaDivListaItens' class='styled-select'></div>
+	<br>
+	<p class='paragrafo'>
+		<input style='cursor: pointer' type='checkbox' checked id='i3GEOtoponimianovotema' />
+		&nbsp;{{{adicionaToponimia}}}
+		<br>
+	<p class='paragrafo'>{{{minmaxscale}}}:</p>
+	<div class='i3geoForm150 i3geoFormIconeNumero' style='float:left;'>
+		<input type='number' value='' id='i3GEOtoponimiaMinscale' />
+	</div>
+	<div class='i3geoForm150 i3geoFormIconeNumero'>
+		<input type='number' value='' id='i3GEOtoponimiaMaxscale' />
+	</div>
+	<br>
+	<p class='paragrafo'>
+		<input id='i3GEOtoponimiabotao1' size='35' type='button' value='{{{criaToponimia}}}' />
+		<input id='i3GEOtoponimiabotao2' size='35' type='button' value='{{{removeToponimia}}}' />
+</div>
+<div class='guiaobj' id='i3GEOtoponimiaguia2obj' style='left: 1px; display: none;'>
+
+	<p class='paragrafo'>{{{fonte}}}:</p>
+	<div class='styled-select' id='i3GEOtoponimiaDivListaFonte'>{{{aguarda}}}...</div>
+
+	<br>
+	<p class='paragrafo'>{{{tamanho}}}:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='8' id='i3GEOtoponimiatamanho_i' />
+	</div>
+
+	<br>
+	<p class='paragrafo'>{{{angulo}}}:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='0' id='i3GEOtoponimiaangulo_i' />
+	</div>
+
+	<br>
+	<p class='paragrafo'>{{{deslocamentoTexto}}} X:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='0' id='i3GEOtoponimiaoffsetx_i' />
+	</div>
+
+	<br>
+	<p class='paragrafo'>{{{deslocamentoTexto}}} Y:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='0' id='i3GEOtoponimiaoffsety_i' />
+	</div>
+
+	<br>
+	<p class='paragrafo'>{{{corTexto}}}:</p>
+	<div class='i3geoForm100 i3geoFormIconeAquarela' style='float: left;'>
+		<input type='text' value='0,0,0' id='i3GEOtoponimiafrente_i' />
+	</div>
+	<br> <br> <br>
+	<p class='paragrafo'>{{{corMascara}}}:</p>
+	<div class='i3geoForm100 i3geoFormIconeAquarela' style='float: left;'>
+		<input type='text' value='-1,-1,-1' id='i3GEOtoponimiamascara_i' />
+	</div>
+	<br> <br> <br>
+	<p class='paragrafo'>{{{posicionamento}}}:</p>
+	<div class='styled-select' style='width: 100px;'>
+		<select id='i3GEOtoponimiaposition_i'>
+			<option value='MS_AUTO'>auto</option>
+			<option value='MS_UL'>UL</option>
+			<option value='MS_UC'>UC</option>
+			<option value='MS_UR'>UR</option>
+			<option value='MS_CL'>CL</option>
+			<option value='MS_CC'>CC</option>
+			<option value='MS_CR'>CR</option>
+			<option value='MS_LL'>LL</option>
+			<option value='MS_LC'>LC</option>
+			<option value='MS_LR'>LR</option>
+		</select>
+	</div>
+
+	<br>
+	<p class='paragrafo'>{{{corFundo}}}:
+	<div class='i3geoForm100 i3geoFormIconeAquarela' style='float: left;'>
+		<input type='text' value='0,0,0' id='i3GEOtoponimiafundoc_i' />
+	</div>
+	<br> <br> <br>
+	<p class='paragrafo'>{{{corSombraFundo}}}:
+	<div class='i3geoForm i3geoFormIconeAquarela' style='float: left;'>
+		<input type='text' value='' id='i3GEOtoponimiasombra_i' />
+	</div>
+	<br> <br> <br>
+	<p class='paragrafo'>{{{deslocamentoSombraFundo}}} X:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='1' id='i3GEOtoponimiasombrax_i' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{deslocamentoSombraFundo}}} Y:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='1' id='i3GEOtoponimiasombray_i' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{corSombra}}}:</p>
+	<div class='i3geoForm100 i3geoFormIconeAquarela' style='float: left;'>
+		<input type='text' value='' id='i3GEOtoponimiafrentes_i' />
+	</div>
+	<br> <br> <br>
+	<p class='paragrafo'>{{{deslocamentoSombraFundo}}} X:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='1' id='i3GEOtoponimiafrentex_i' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{deslocamentoSombraFundo}}} Y:</p>
+	<div class='i3geoForm i3geoFormIconeNumero'>
+		<input type='number' value='1' id='i3GEOtoponimiafrentey_i' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{forcaColisaoTextos}}}:</p>
+	<div class='styled-select'>
+		<select id='i3GEOtoponimiaforce_i'>
+			<option value='0'>{{{nao}}}</option>
+			<option value='1'>{{{sim}}}</option>
+		</select>
+	</div>
+	<br>
+	<p class='paragrafo'>{{{distanciaMinTextos}}}:</p>
+	<div class='i3geoForm i3geoFormIconeEdita'>
+		<input type='text' value='auto' id='i3GEOtoponimiamindistance_i' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{tamanhoMinElementoCarto}}}:</p>
+	<div class='i3geoForm i3geoFormIconeEdita'>
+		<input type='text' value='auto' id='i3GEOtoponimiaminfeaturesize_i' />
+	</div>
+	<br>
+	<p class='paragrafo'>{{{textoUltrapassaMapa}}}:</p>
+	<div class='styled-select'>
+		<select id='i3GEOtoponimiapartials_i'>
+			<option value='1'>{{{sim}}}</option>
+			<option value='0'>{{{nao}}}</option>
+		</select>
+	</div>
+	<br>
+	<p class='paragrafo'>{{{caracterQuebraTexto}}}:</p>
+	<div class='i3geoForm i3geoFormIconeEdita'>
+		<input type='text' value='' id='i3GEOtoponimiawrap_i' />
+	</div>
+	<br> <br>
+</div>
+<div class='guiaobj' id='i3GEOtoponimiaguia3obj' style='left: 1px; 90%; display: none;'>
+	<div id='i3GEOtoponimiaTeste' style='width: 98%; top: 15px; left: 0px;'></div>
+</div>

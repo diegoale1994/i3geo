@@ -1,0 +1,46 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from d_doble using unique gid using srid=4326"
+    METADATA
+      "cache"	"sim"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "permitedownload"	"sim"
+      "download"	"nao"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Drenaje Doble"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "drenajedoble"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Lecho Seco ó Cauce"
+      EXPRESSION ('[ruleid]'eq'1')
+      STYLE
+        COLOR 17 22 155
+        OUTLINECOLOR 17 22 155
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cuerpo de agua"
+      EXPRESSION ('[ruleid]'eq'2')
+      STYLE
+        COLOR 24 174 191
+        OUTLINECOLOR 24 174 191
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

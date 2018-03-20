@@ -1,0 +1,31 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+  CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE RASTER
+    DATA "rast from af_h using unique gid using srid=4326"
+    METADATA
+      "cache"	"SIM"
+      "CLASSE"	"SIM"
+      "permitekmz"	"SIM"
+      "tiles"	"SIM"
+      "permitedownload"	"SIM"
+      "permitekml"	"SIM"
+      "permiteogc"	"SIM"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "af"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TYPE RASTER
+    UNITS METERS
+    CLASS
+      NAME ""
+      STYLE
+        COLOR 0 0 0
+        SIZE 12
+      END # STYLE
+    END # CLASS
+  END # LAYER
+END # MAP

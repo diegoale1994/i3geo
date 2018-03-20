@@ -1,0 +1,60 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from avenidas_torrenciales using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "mensagem"	"Avenidas Torrenciales"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Avenidas Torrenciales"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "av_torrenciales"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 80
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Baja"
+      EXPRESSION ('[grad_amena]'eq'Baja')
+      STYLE
+        COLOR 194 240 140
+        OUTLINECOLOR 194 240 140
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Media"
+      EXPRESSION ('[grad_amena]'eq'Media')
+      STYLE
+        COLOR 240 193 99
+        OUTLINECOLOR 240 193 99
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Alta"
+      EXPRESSION ('[grad_amena]'eq'Alta')
+      STYLE
+        COLOR 239 27 27
+        OUTLINECOLOR 239 27 27
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

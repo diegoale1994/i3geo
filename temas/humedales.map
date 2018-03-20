@@ -1,0 +1,68 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from humedales using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Humedales"
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"nao"
+      "FILTROORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "DATAORIGINAL"	""
+      "download"	"nao"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Humedales"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "humedales"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Laguna"
+      EXPRESSION ('[tipo]'eq'Laguna')
+      STYLE
+        COLOR 19 131 243
+        OUTLINECOLOR 19 131 243
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Humedal"
+      EXPRESSION ('[tipo]'eq'Humedal')
+      STYLE
+        COLOR 55 234 240
+        OUTLINECOLOR 55 234 240
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Embalse"
+      EXPRESSION ('[tipo]'eq'Embalse')
+      STYLE
+        COLOR 14 93 250
+        OUTLINECOLOR 14 93 250
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

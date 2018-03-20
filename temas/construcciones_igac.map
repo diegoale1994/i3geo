@@ -1,0 +1,188 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from construcciones_igac using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Construcciones"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "construcciones_igac"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Establecimiento Educativo"
+      EXPRESSION ('[uso_edific]'eq'Establecimiento Educativo')
+      STYLE
+        COLOR 57 139 210
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "escola"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Establecimiento Sector Salud"
+      EXPRESSION ('[uso_edific]'eq'Establecimiento Sector Salud')
+      STYLE
+        COLOR 246 97 97
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "saude"
+        WIDTH 0.25
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Sitio Interes Historico"
+      EXPRESSION ('[uso_edific]'eq'Sitio Interes Historico')
+      STYLE
+        COLOR 134 48 48
+        OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "rosa200"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Industria"
+      EXPRESSION ('[uso_edific]'eq'Industria')
+      STYLE
+        COLOR 221 94 85
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Instalacion Minera"
+      EXPRESSION ('[uso_edific]'eq'Instalacion Minera')
+      STYLE
+        COLOR 44 113 89
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Cementerio, Parque Cementerio"
+      EXPRESSION ('[uso_edific]'eq'Cementerio, Parque Cementerio')
+      STYLE
+        COLOR 243 108 14
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Sitio de Interes"
+      EXPRESSION ('[uso_edific]'eq'Sitio de Interes')
+      STYLE
+        COLOR 21 153 109
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Iglesia"
+      EXPRESSION ('[uso_edific]'eq'Iglesia')
+      STYLE
+        COLOR 94 122 30
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Molino"
+      EXPRESSION ('[uso_edific]'eq'Molino')
+      STYLE
+        COLOR 49 227 245
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Seguridad"
+      EXPRESSION ('[uso_edific]'eq'Seguridad')
+      STYLE
+        COLOR 101 3 108
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Hotel"
+      EXPRESSION ('[uso_edific]'eq'Hotel')
+      STYLE
+        COLOR 111 47 1
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Tanque"
+      EXPRESSION ('[uso_edific]'eq'Tanque')
+      STYLE
+        COLOR 0 199 56
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Otras Construcciones"
+      EXPRESSION ('[uso_edific]'eq'Otras Construcciones')
+      STYLE
+        COLOR 206 198 198
+        OUTLINECOLOR 255 255 255
+        SIZE 2
+        SYMBOL "ponto"
+        WIDTH 0
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

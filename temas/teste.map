@@ -1,0 +1,29 @@
+MAP
+SYMBOLSET ../symbols/simbolosv6.sym
+FONTSET   "../symbols/fontes.txt"
+LAYER
+	NAME "teste"
+	TEMPLATE "none.htm"
+	CONNECTIONTYPE POSTGIS
+	TYPE line
+	DATA ""
+	CONNECTION ""
+	STATUS DEFAULT
+	METADATA
+		TEMA ""
+		CLASSE "SIM"
+		METAESTAT "SIM"
+		permiteogc "SIM"
+		permitedownload "SIM"
+		permitekml "SIM"
+		permitekmz "SIM"
+	END
+    CLASS
+        NAME ""
+        STYLE
+        	COLOR 0 0 0
+        	SIZE 12
+        END
+    END
+END
+END

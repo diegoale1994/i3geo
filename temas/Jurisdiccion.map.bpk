@@ -1,0 +1,48 @@
+MAP
+  FONTSET "/var/www/html/i3geo/symbols/fontes.txt"
+  SYMBOLSET "/var/www/html/i3geo/symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA ""
+    GROUP "Pp"
+    METADATA
+      "cache"	"SIM"
+      "CLASSE"	"SIM"
+      "ltempoitemdescricao"	""
+      "ltempoiteminicio"	""
+      "permitekmz"	"sim"
+      "ltempoitemtip"	""
+      "escala"	"Escala"
+      "tiles"	"SIM"
+      "EDITAVEL"	"SIM"
+      "mensagem"	"Mensaje"
+      "permitedownload"	"sim"
+      "permitecomentario"	"SIM"
+      "escondido"	"NAO"
+      "download"	"sim"
+      "transitioneffect"	"NAO"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "TEMA"	"Jurisdiccion"
+      "convcaracter"	"NAO"
+      "cortepixels"	"0"
+      "identifica"	"SIM"
+      "aplicaextensao"	"SIM"
+    END # METADATA
+    NAME "Jurisdiccion"
+    STATUS ON
+    TEMPLATE "none.htm"
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "CORPOCHIVOR"
+      EXPRESSION "(\'[car]\'t4õ%ô4„•dõ\"r"
+      STYLE
+        COLOR 48 10 27
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

@@ -1,0 +1,77 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from vocacion_s using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"nao"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"nao"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Vocaci�n del Suelo"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "vocacion_s"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 75
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Conservacion"
+      EXPRESSION ('[uso]'eq'Conservacion')
+      STYLE
+        COLOR 64 190 0
+        OUTLINECOLOR 64 190 0
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Agricola"
+      EXPRESSION ('[uso]'eq'Agricola')
+      STYLE
+        COLOR 158 142 38
+        OUTLINECOLOR 158 142 38
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Ganaderi­a"
+      EXPRESSION ('[uso]'eq'Ganaderi­a')
+      STYLE
+        COLOR 189 97 63
+        OUTLINECOLOR 189 97 63
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zonas Urbanas"
+      EXPRESSION ('[uso]'eq'Zonas Urbanas')
+      STYLE
+        COLOR 253 1 0
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+
