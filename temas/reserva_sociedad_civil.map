@@ -4,7 +4,8 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from c_scy using unique gid using srid=4326"
+    DATA "the_geom from reservasociedadcivil using unique gid using srid=4326"
+    GROUP "Reserva Sociedad Civil"
     METADATA
       "METAESTAT_ID_MEDIDA_VARIAVEL"	""
       "cache"	"nao"
@@ -16,7 +17,7 @@ MAP
       "iconetema"	""
       "METAESTAT_CODIGO_TIPO_REGIAO"	""
       "arquivotemaoriginal"	""
-      "mensagem"	"Zonificación Cuchilla de San Cayetano"
+      "mensagem"	"Reserva Natural Sociedad Civil"
       "nomeoriginal"	""
       "olstatus"	""
       "permitedownload"	"sim"
@@ -27,51 +28,23 @@ MAP
       "download"	"sim"
       "permitekml"	"sim"
       "permiteogc"	"sim"
-      "tema"	"Zonificación Cuchilla de San Cayetano"
+      "tema"	"Reserva Natural Sociedad Civil"
       "cortepixels"	"0"
     END # METADATA
-    NAME "c_sanc"
+    NAME "reserva_sociedad_civil"
     PROCESSING "LABEL_NO_CLIP=True"
     PROCESSING "POLYLINE_NO_CLIP=True"
     STATUS DEFAULT
     TEMPLATE "none.htm"
     TILEITEM "location"
-    OPACITY 80
     TYPE POLYGON
     UNITS METERS
     CLASS
-      NAME "Preservacion"
-      EXPRESSION ('[zonifica]'eq'Preservacion')
+      NAME "San Antonio"
+      EXPRESSION ('[nombre]'eq'San Antonio')
       STYLE
-        COLOR 56 201 12
-        OUTLINECOLOR 56 201 12
-      END # STYLE
-      TITLE ""
-    END # CLASS
-    CLASS
-      NAME "Restauracion"
-      EXPRESSION ('[zonifica]'eq'Restauracion')
-      STYLE
-        COLOR 239 112 15
-        OUTLINECOLOR 239 112 15
-      END # STYLE
-      TITLE ""
-    END # CLASS
-    CLASS
-      NAME "Uso para el desarrollo"
-      EXPRESSION ('[zonifica]'eq'Uso para el desarrollo')
-      STYLE
-        COLOR 230 198 35
-        OUTLINECOLOR 230 198 35
-      END # STYLE
-      TITLE ""
-    END # CLASS
-    CLASS
-      NAME "Uso sostenible"
-      EXPRESSION ('[zonifica]'eq'Uso sostenible')
-      STYLE
-        COLOR 213 242 180
-        OUTLINECOLOR 213 242 180
+        COLOR 96 201 17
+        OUTLINECOLOR 255 255 255
       END # STYLE
       TITLE ""
     END # CLASS

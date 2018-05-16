@@ -12,8 +12,8 @@ MAP
       "mensagem"	"Zonificación Cuchilla Negra - Guachaneque"
       "permitedownload"	"nao"
       "download"	"nao"
-      "permitekml"	"sim"
       "permiteogc"	"sim"
+      "permitekml"	"sim"
       "tema"	"Zonificación Cuchilla Negra - Guachaneque"
       "cortepixels"	"0"
     END # METADATA
@@ -63,4 +63,6 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
+
 END # MAP
+

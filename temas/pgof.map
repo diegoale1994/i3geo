@@ -16,8 +16,8 @@ MAP
       "permitedownload"	"sim"
       "metaestat"	""
       "download"	"sim"
-      "permiteogc"	"sim"
       "permitekml"	"sim"
+      "permiteogc"	"sim"
       "tema"	"Plan General de Ordenación Forestal (zonificación)"
       "cortepixels"	"0"
     END # METADATA

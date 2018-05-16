@@ -1,0 +1,148 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from pliegues using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Pliegues 100k"
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "DATAORIGINAL"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Pliegues"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "pliegues"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "Anticlinal"
+      EXPRESSION ('[tipo]'eq'Anticlinal')
+      LABEL
+        ANGLE 45
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nombreplie]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 51 11 11
+        OUTLINECOLOR 255 255 255
+        WIDTH 3
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Sinclinal"
+      EXPRESSION ('[tipo]'eq'Sinclinal')
+      LABEL
+        ANGLE 45
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nombreplie]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 101 63 63
+        OUTLINECOLOR 255 255 255
+        WIDTH 2
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Anticlinal con cabeceo"
+      EXPRESSION ('[tipo]'eq'Anticlinal con cabeceo')
+      LABEL
+        ANGLE 45
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nombreplie]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 16 66 124
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Sinclinal con cabeceo"
+      EXPRESSION ('[tipo]'eq'Sinclinal con cabeceo')
+      LABEL
+        ANGLE 45
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nombreplie]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 68 103 156
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Sinclinal con doble cabeceo"
+      EXPRESSION ('[tipo]'eq'Sinclinal con doble cabeceo')
+      LABEL
+        ANGLE 45
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[nombreplie]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 74 80 35
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+
