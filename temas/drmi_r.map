@@ -4,7 +4,7 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from drmi_zf using unique gid using srid=4326"
+    DATA "geom from drmi_r using unique gid using srid=4326"
     METADATA
       "cache"	"nao"
       "CLASSE"	"SIM"
@@ -27,31 +27,51 @@ MAP
     TYPE POLYGON
     UNITS METERS
     CLASS
-      NAME "Preservacion del Paramo"
-      EXPRESSION ('[zonifica]'eq'Preservacion del Paramo')
+      NAME "Preservacion"
+      EXPRESSION ('[zonifica]'eq'Preservacion')
       STYLE
-        COLOR 56 201 12
-        OUTLINECOLOR 56 201 12
+        COLOR 62 172 40
+        OUTLINECOLOR 62 172 40
       END # STYLE
       TITLE ""
     END # CLASS
     CLASS
-      NAME "Recuperacion para la Preservacion"
-      EXPRESSION ('[zonifica]'eq'Recuperacion para la Preservacion')
+      NAME "Restauracion"
+      EXPRESSION ('[zonifica]'eq'Restauracion')
       STYLE
-        COLOR 239 112 15
-        OUTLINECOLOR 239 112 15
+        COLOR 236 177 41
+        OUTLINECOLOR 236 177 41
       END # STYLE
       TITLE ""
     END # CLASS
     CLASS
-      NAME "Recuperacion para la Produccion"
-      EXPRESSION ('[zonifica]'eq'Recuperacion para la Produccion')
+      NAME "Uso Sostenible (Desarrollo)"
+      EXPRESSION ('[zonifica]'eq'Uso Sostenible (Desarrollo)')
       STYLE
-        COLOR 230 198 35
-        OUTLINECOLOR 230 198 35
+        COLOR 242 15 15
+        OUTLINECOLOR 242 15 15
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Uso Sostenible (Aprovechamiento)"
+      EXPRESSION ('[zonifica]'eq'Uso Sostenible (Aprovechamiento)')
+      STYLE
+        COLOR 229 250 179
+        OUTLINECOLOR 229 250 179
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Uso Publico (Recreacion)"
+      EXPRESSION ('[zonifica]'eq'Uso Publico (Recreacion)')
+      STYLE
+        COLOR 153 30 247
+        OUTLINECOLOR 153 30 247
       END # STYLE
       TITLE ""
     END # CLASS
   END # LAYER
+
 END # MAP
+

@@ -6,14 +6,17 @@ MAP
     CONNECTIONTYPE POSTGIS
     DATA "geom from r_hidricas using unique gid using srid=4326"
     METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
       "cache"	"nao"
       "CLASSE"	"SIM"
       "permitekmz"	"sim"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
       "mensagem"	"Rondas Hídricas"
       "permitedownload"	"sim"
+      "metaestat"	""
       "download"	"sim"
-      "permiteogc"	"sim"
       "permitekml"	"sim"
+      "permiteogc"	"sim"
       "tema"	"Rondas Hídricas"
       "cortepixels"	"0"
     END # METADATA
@@ -72,4 +75,6 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
+
 END # MAP
+

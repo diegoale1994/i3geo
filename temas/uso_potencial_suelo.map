@@ -1,0 +1,129 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from usopotencialsuelo using unique gid using srid=4326"
+    GROUP "Uso Potencial del Suelo"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Uso Potencial del Suelo"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "uso_potencial_suelo"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Capacidad de uso VIII"
+      EXPRESSION ('[nom_gru_up]'eq'Capacidad de uso VIII')
+      STYLE
+        COLOR 54 110 5
+        OUTLINECOLOR 54 110 5
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Capacidad de uso VII"
+      EXPRESSION ('[nom_gru_up]'eq'Capacidad de uso VII')
+      STYLE
+        COLOR 127 202 29
+        OUTLINECOLOR 127 202 29
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Capacidad de uso VI"
+      EXPRESSION ('[nom_gru_up]'eq'Capacidad de uso VI')
+      STYLE
+        COLOR 101 129 7
+        OUTLINECOLOR 101 129 7
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Capacidad de uso V"
+      EXPRESSION ('[nom_gru_up]'eq'Capacidad de uso V')
+      STYLE
+        COLOR 192 192 102
+        OUTLINECOLOR 192 192 102
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Capacidad de uso IV"
+      EXPRESSION ('[nom_gru_up]'eq'Capacidad de uso IV')
+      STYLE
+        COLOR 127 178 159
+        OUTLINECOLOR 127 178 159
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Capacidad de uso III"
+      EXPRESSION ('[nom_gru_up]'eq'Capacidad de uso III')
+      STYLE
+        COLOR 196 220 168
+        OUTLINECOLOR 196 220 168
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Zona Urbana"
+      EXPRESSION ('[nom_gru_up]'eq'Zona Urbana')
+      STYLE
+        COLOR 247 197 78
+        OUTLINECOLOR 247 197 78
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Embalse"
+      EXPRESSION ('[nom_gru_up]'eq'Embalse')
+      STYLE
+        COLOR 36 100 172
+        OUTLINECOLOR 36 100 172
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Lagos"
+      EXPRESSION ('[nom_gru_up]'eq'Lagos')
+      STYLE
+        COLOR 54 207 218
+        OUTLINECOLOR 54 207 218
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Rios"
+      EXPRESSION ('[nom_gru_up]'eq'Rios')
+      STYLE
+        COLOR 35 196 245
+        OUTLINECOLOR 35 196 245
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Barras"
+      EXPRESSION ('[nom_gru_up]'eq'Barras')
+      STYLE
+        COLOR 209 206 206
+        OUTLINECOLOR 209 206 206
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

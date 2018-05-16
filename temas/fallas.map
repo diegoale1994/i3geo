@@ -1,0 +1,106 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from fallas using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Fallas"
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"nao"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "PLUGINI3GEO"	""
+      "DATAORIGINAL"	""
+      "download"	"nao"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Fallas"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "fallas"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE LINE
+    UNITS METERS
+    CLASS
+      NAME "Falla"
+      EXPRESSION ('[tipo]'eq'Falla')
+      STYLE
+        COLOR 13 0 0
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Falla cubierta"
+      EXPRESSION ('[tipo]'eq'Falla cubierta')
+      STYLE
+        COLOR 111 20 121
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Falla de rumbo dextral"
+      EXPRESSION ('[tipo]'eq'Falla de rumbo dextral')
+      STYLE
+        COLOR 107 84 11
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Falla inversa o de cabalgamiento cubierta"
+      EXPRESSION ('[tipo]'eq'Falla inversa o de cabalgamiento cubierta')
+      STYLE
+        COLOR 112 19 165
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Falla inversa o de cabalgamiento"
+      EXPRESSION ('[tipo]'eq'Falla inversa o de cabalgamiento')
+      STYLE
+        COLOR 226 63 52
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Lineamiento"
+      EXPRESSION ('[tipo]'eq'Lineamiento')
+      STYLE
+        COLOR 96 103 154
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Falla inferida"
+      EXPRESSION ('[tipo]'eq'Falla inferida')
+      STYLE
+        COLOR 134 57 57
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

@@ -1,0 +1,350 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "the_geom from u_cronoes using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"SIM"
+      "mensagem"	"Unidades Cronoestratigráficas"
+      "permitedownload"	"nao"
+      "download"	"SIM"
+      "permiteogc"	"SIM"
+      "permitekml"	"SIM"
+      "tema"	"Unidades Cronoestratigráficas"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "u_cronoestratigrafica"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "b1-Sctm"
+      EXPRESSION ('[SimboloUC]'eq'b1-Sctm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 7 138 20
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "b1k1-Sm"
+      EXPRESSION ('[SimboloUC]'eq'b1k1-Sm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 93 193 150
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "b2k1-Sm"
+      EXPRESSION ('[SimboloUC]'eq'b2k1-Sm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 154 203 147
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "k1k6-Stm"
+      EXPRESSION ('[SimboloUC]'eq'k1k6-Stm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 179 208 129
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "k5E1-Stm"
+      EXPRESSION ('[SimboloUC]'eq'k5E1-Stm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 212 177 35
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "k6E1-Stm"
+      EXPRESSION ('[SimboloUC]'eq'k6E1-Stm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 250 184 125
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "DC-Sctm"
+      EXPRESSION ('[SimboloUC]'eq'DC-Sctm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 247 206 109
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "e6e9-Sct"
+      EXPRESSION ('[SimboloUC]'eq'e6e9-Sct')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 240 218 167
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "E3N1-Stm"
+      EXPRESSION ('[SimboloUC]'eq'E3N1-Stm')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 230 220 76
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "E1-Sc"
+      EXPRESSION ('[SimboloUC]'eq'E1-Sc')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 203 142 19
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "N2Q1-Sc"
+      EXPRESSION ('[SimboloUC]'eq'N2Q1-Sc')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 192 174 66
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Q-al"
+      EXPRESSION ('[SimboloUC]'eq'Q-al')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 238 218 218
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Q-ca"
+      EXPRESSION ('[SimboloUC]'eq'Q-ca')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 233 230 200
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Q-g"
+      EXPRESSION ('[SimboloUC]'eq'Q-g')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 213 210 167
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Q-t"
+      EXPRESSION ('[SimboloUC]'eq'Q-t')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 233 245 72
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Q1-ca"
+      EXPRESSION ('[SimboloUC]'eq'Q1-ca')
+      LABEL
+        FONT "arial"
+        SIZE 6
+        MINDISTANCE 0
+        MINFEATURESIZE 0
+        OFFSET 0 0
+        POSITION AUTO
+        SHADOWSIZE 1 1
+        TEXT "[SimboloUC]"
+        TYPE TRUETYPE
+      END # LABEL
+      STYLE
+        COLOR 147 197 233
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

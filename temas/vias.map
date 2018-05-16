@@ -4,30 +4,65 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from vias_igac_invias using unique gid using srid=4326"
+    DATA "geom from vias_igac_inviasX using unique gid using srid=4326"
     METADATA
-      "cache"	""
+      "cache"	"nao"
       "CLASSE"	"SIM"
       "permitekmz"	"sim"
       "permitedownload"	"sim"
       "download"	"sim"
       "permiteogc"	"sim"
       "permitekml"	"sim"
+      "tema"	"Red Vial"
       "cortepixels"	"0"
     END # METADATA
     NAME "vias"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
     STATUS DEFAULT
     TEMPLATE "none.htm"
     TILEITEM "location"
     TYPE LINE
     UNITS METERS
     CLASS
-      NAME ""
+      NAME "Nacional "
+      EXPRESSION ('[tipo_via]'eq'Nacional (Primer Orden)')
       STYLE
-        COLOR 0 0 0
-        SIZE 12
-        SYMBOL "linha"
+        COLOR 236 26 26
+        OUTLINECOLOR 255 255 255
+        WIDTH 2
       END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Departamental "
+      EXPRESSION ('[tipo_via]'eq'Departamental (Tipo 3)')
+      STYLE
+        COLOR 232 173 10
+        OUTLINECOLOR 255 255 255
+        WIDTH 2
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Municipal "
+      EXPRESSION ('[tipo_via]'eq'Municipal (Tipo 6)')
+      STYLE
+        COLOR 238 33 33
+        OUTLINECOLOR 255 255 255
+        WIDTH 0.35
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Camino, Sendero"
+      EXPRESSION ('[tipo_via]'eq'Camino, Sendero')
+      STYLE
+        COLOR 174 171 145
+        OUTLINECOLOR 255 255 255
+        WIDTH 0.5
+      END # STYLE
+      TITLE ""
     END # CLASS
   END # LAYER
 END # MAP
