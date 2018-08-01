@@ -11,7 +11,7 @@ MAP
       "permitekmz"	"nao"
       "mensagem"	"Zonificación Cuchilla Negra - Guachaneque"
       "permitedownload"	"nao"
-      "download"	"nao"
+      "download"	"sim"
       "permiteogc"	"sim"
       "permitekml"	"sim"
       "tema"	"Zonificación Cuchilla Negra - Guachaneque"
@@ -63,6 +63,4 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
-
 END # MAP
-

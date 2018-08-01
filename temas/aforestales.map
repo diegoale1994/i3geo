@@ -1,0 +1,76 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from aforestales using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Aprovechamientos Forestales Autorizados"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "aforestales"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "Mayor"
+      EXPRESSION ('[tipo]'eq'Mayor')
+      STYLE
+        COLOR 32 142 72
+        OUTLINECOLOR 255 255 255
+        SIZE 12
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Menor"
+      EXPRESSION ('[tipo]'eq'Menor')
+      STYLE
+        COLOR 136 182 137
+        OUTLINECOLOR 255 255 255
+        SIZE 8
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "SI"
+      EXPRESSION ('[tipo]'eq'SI')
+      STYLE
+        COLOR 145 136 136
+        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

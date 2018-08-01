@@ -1,0 +1,108 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from mm_uptc_s_m using unique gid using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "arquivotemaoriginal"	""
+      "mensagem"	"Inventario Movimientos en Masa"
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "metaestat"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Inventario Movimientos en Masa"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "mm"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Deslizamiento Traslacional"
+      EXPRESSION ('[clasif]'eq'Deslizamiento Traslacional')
+      STYLE
+        COLOR 195 169 99
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Deslizamiento Rotacional"
+      EXPRESSION ('[clasif]'eq'Deslizamiento Rotacional')
+      STYLE
+        COLOR 99 174 145
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Deslizamiento por Flujo"
+      EXPRESSION ('[clasif]'eq'Deslizamiento por Flujo')
+      STYLE
+        COLOR 55 86 146
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Reptacion de Suelos"
+      EXPRESSION ('[clasif]'eq'Reptacion de Suelos')
+      STYLE
+        COLOR 238 25 25
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Caida de Detritos"
+      EXPRESSION ('[clasif]'eq'Caida de Detritos')
+      STYLE
+        COLOR 141 218 55
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Caida de Tierras"
+      EXPRESSION ('[clasif]'eq'Caida de Tierras')
+      STYLE
+        COLOR 97 28 28
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Caida de Roca"
+      EXPRESSION ('[clasif]'eq'Caida de Roca')
+      STYLE
+        COLOR 195 193 193
+        OUTLINECOLOR 255 255 255
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+
