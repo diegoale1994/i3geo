@@ -1,0 +1,48 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from ocauce using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "olopacity"	""
+      "CLASSE"	"SIM"
+      "permitekmz"	"nao"
+      "gmopacity"	""
+      "gmstatus"	""
+      "arquivotemaoriginal"	""
+      "olstatus"	""
+      "nomeoriginal"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Ocupación de Cauces Autorizados"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "ocauce"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    TYPE POINT
+    UNITS METERS
+    CLASS
+      NAME "OC Autorizado"
+      STYLE
+        COLOR 46 157 253
+        SIZE 12
+        SYMBOL "google1"
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+
