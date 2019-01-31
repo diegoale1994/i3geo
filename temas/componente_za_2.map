@@ -1,0 +1,57 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from componente_za_2_solo2 using unique gid using srid=4326"
+    GROUP "POMCAs"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Zonificacion Uso de la tierra"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "componente_za_2"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Areas agricolas"
+      EXPRESSION ('[za_tipo_2]'eq'Areas agricolas')
+      STYLE
+        COLOR 19 68 57
+        OUTLINECOLOR 19 68 57
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas agrosilvopastoriles"
+      EXPRESSION ('[za_tipo_2]'eq'Areas agrosilvopastoriles')
+      STYLE
+        COLOR 195 188 94
+        OUTLINECOLOR 195 188 94
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas de recuperacion para el uso multiple"
+      EXPRESSION ('[za_tipo_2]'eq'Areas de recuperacion para el uso multiple')
+      STYLE
+        COLOR 165 43 43
+        OUTLINECOLOR 165 43 43
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+END # MAP

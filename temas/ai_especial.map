@@ -15,8 +15,8 @@ MAP
       "permitedownload"	"sim"
       "metaestat"	""
       "download"	"sim"
-      "permitekml"	"sim"
       "permiteogc"	"sim"
+      "permitekml"	"sim"
       "tema"	"Áreas de Interés Especial"
       "cortepixels"	"0"
     END # METADATA

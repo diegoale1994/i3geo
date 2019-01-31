@@ -4,26 +4,13 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from rastros_fauna using unique gid using srid=4326"
+    DATA "geom from rastros_fauna using unique id using srid=4326"
     METADATA
-      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
       "cache"	"nao"
-      "olopacity"	""
       "CLASSE"	"SIM"
       "permitekmz"	"sim"
-      "gmopacity"	""
-      "gmstatus"	""
-      "iconetema"	""
-      "METAESTAT_CODIGO_TIPO_REGIAO"	""
-      "arquivotemaoriginal"	""
       "mensagem"	"Rastros de Fauna silvestre"
-      "olstatus"	""
-      "nomeoriginal"	""
       "permitedownload"	"sim"
-      "FILTROORIGINAL"	""
-      "DATAORIGINAL"	""
-      "PLUGINI3GEO"	""
-      "metaestat"	""
       "download"	"sim"
       "permiteogc"	"sim"
       "permitekml"	"sim"
@@ -41,7 +28,7 @@ MAP
     UNITS METERS
     CLASS
       NAME "Oso andino"
-      EXPRESSION ('[n_comun]'eq'Oso andino')
+      EXPRESSION ('[n_comun]'eq'Oso Andino')
       STYLE
         COLOR 181 77 77
         OUTLINECOLOR 255 255 255
@@ -418,6 +405,4 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
-
 END # MAP
-

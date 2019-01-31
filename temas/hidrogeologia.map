@@ -1,0 +1,116 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from hidrogeologico using unique id using srid=4326"
+    METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "permitedownload"	"sim"
+      "metaestat"	""
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Hidrogeologia"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "Hidrogeologia"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Acuicierre"
+      EXPRESSION ('[nom_hgeo]'eq'Acuicierre')
+      STYLE
+        COLOR 192 238 247
+        OUTLINECOLOR 192 238 247
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Acuitardo"
+      EXPRESSION ('[nom_hgeo]'eq'Acuitardo')
+      STYLE
+        COLOR 102 194 212
+        OUTLINECOLOR 102 194 212
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Acuifero promedio"
+      EXPRESSION ('[nom_hgeo]'eq'Acuifero promedio')
+      STYLE
+        COLOR 39 138 236
+        OUTLINECOLOR 39 138 236
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Acuifero de alta productividad"
+      EXPRESSION ('[nom_hgeo]'eq'Acuifero de alta productividad')
+      STYLE
+        COLOR 24 49 148
+        OUTLINECOLOR 24 49 148
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Lago"
+      EXPRESSION ('[nom_hgeo]'eq'Lago')
+      STYLE
+        COLOR 242 173 13
+        OUTLINECOLOR 242 173 13
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Rio"
+      EXPRESSION ('[nom_hgeo]'eq'Rio')
+      STYLE
+        COLOR 226 240 238
+        OUTLINECOLOR 226 240 238
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Embalse"
+      EXPRESSION ('[nom_hgeo]'eq'Embalse')
+      STYLE
+        COLOR 146 243 201
+        OUTLINECOLOR 146 243 201
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Urbano"
+      EXPRESSION ('[nom_hgeo]'eq'Urbano')
+      STYLE
+        COLOR 250 229 124
+        OUTLINECOLOR 250 229 124
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Barras"
+      EXPRESSION ('[nom_hgeo]'eq'Barras')
+      STYLE
+        COLOR 142 88 40
+        OUTLINECOLOR 142 88 40
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

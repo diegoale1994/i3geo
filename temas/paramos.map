@@ -6,13 +6,16 @@ MAP
     CONNECTIONTYPE POSTGIS
     DATA "the_geom from eparamos using unique gid using srid=4326"
     METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
       "cache"	"sim"
       "CLASSE"	"SIM"
-      "permitekmz"	"SIM"
-      "permitedownload"	"NAO"
-      "download"	"NAO"
-      "permitekml"	"SIM"
-      "permiteogc"	"SIM"
+      "permitekmz"	"sim"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
+      "permitedownload"	"nao"
+      "metaestat"	""
+      "download"	"nao"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
       "TEMA"	"Páramos"
       "cortepixels"	"0"
       "identifica"	"SIM"
@@ -54,4 +57,6 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
+
 END # MAP
+

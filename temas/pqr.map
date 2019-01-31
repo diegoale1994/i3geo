@@ -4,21 +4,12 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from pqr_1 using unique gid using srid=4326"
+    DATA "geom from pqr_1 using unique id using srid=4326"
     METADATA
       "cache"	"nao"
       "CLASSE"	"SIM"
-      "olopacity"	""
       "permitekmz"	"sim"
-      "gmopacity"	""
-      "gmstatus"	""
-      "arquivotemaoriginal"	""
-      "nomeoriginal"	""
-      "olstatus"	""
       "permitedownload"	"sim"
-      "FILTROORIGINAL"	""
-      "DATAORIGINAL"	""
-      "PLUGINI3GEO"	""
       "download"	"sim"
       "permiteogc"	"sim"
       "permitekml"	"sim"
@@ -133,6 +124,4 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
-
 END # MAP
-

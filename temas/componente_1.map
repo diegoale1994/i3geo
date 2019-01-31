@@ -4,32 +4,43 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from o_cauce using unique id using srid=4326"
+    DATA "geom from componente_za_1 using unique id using srid=4326"
+    GROUP "POMCAs"
     METADATA
       "cache"	"nao"
       "CLASSE"	"SIM"
-      "permitekmz"	"nao"
+      "permitekmz"	"sim"
       "permitedownload"	"sim"
       "download"	"sim"
-      "permitekml"	"sim"
       "permiteogc"	"sim"
-      "tema"	"Ocupación de Cauces Autorizados"
+      "permitekml"	"sim"
+      "tema"	"Zonificación Áreas y Ecosistemas Estratégicos (1)"
       "cortepixels"	"0"
     END # METADATA
-    NAME "ocauce"
+    NAME "componente_1"
     PROCESSING "LABEL_NO_CLIP=True"
     PROCESSING "POLYLINE_NO_CLIP=True"
     STATUS DEFAULT
     TEMPLATE "none.htm"
     TILEITEM "location"
-    TYPE POINT
+    OPACITY 90
+    TYPE POLYGON
     UNITS METERS
     CLASS
-      NAME "OC Autorizado"
+      NAME "Áreas de Protección"
+      EXPRESSION ('[za_tipo]'eq'Areas de Proteccion')
       STYLE
-        COLOR 46 157 253
-        SIZE 12
-        SYMBOL "google1"
+        COLOR 152 186 166
+        OUTLINECOLOR 152 186 166
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Áreas Protegidas"
+      EXPRESSION ('[za_tipo]'eq'Areas Protegidas')
+      STYLE
+        COLOR 90 228 113
+        OUTLINECOLOR 90 228 113
       END # STYLE
       TITLE ""
     END # CLASS

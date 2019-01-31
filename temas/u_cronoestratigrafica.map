@@ -6,14 +6,17 @@ MAP
     CONNECTIONTYPE POSTGIS
     DATA "the_geom from u_cronoes using unique gid using srid=4326"
     METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
       "cache"	"nao"
       "CLASSE"	"SIM"
-      "permitekmz"	"SIM"
+      "permitekmz"	"sim"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
       "mensagem"	"Unidades Cronoestratigráficas"
       "permitedownload"	"nao"
-      "download"	"SIM"
-      "permiteogc"	"SIM"
-      "permitekml"	"SIM"
+      "metaestat"	""
+      "download"	"nao"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
       "tema"	"Unidades Cronoestratigráficas"
       "cortepixels"	"0"
     END # METADATA
@@ -347,4 +350,6 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
+
 END # MAP
+

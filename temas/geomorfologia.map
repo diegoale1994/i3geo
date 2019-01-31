@@ -1,0 +1,96 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from geomorfologia using unique id using srid=4326"
+    GROUP "Geomorfologia"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "permitekmz"	"sim"
+      "iconetema"	""
+      "permitedownload"	"sim"
+      "download"	"sim"
+      "permiteogc"	"sim"
+      "permitekml"	"sim"
+      "tema"	"Geomorfologia"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "geomorfologia"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Antropico"
+      EXPRESSION ('[origen]'eq'Antropico')
+      STYLE
+        COLOR 205 199 199
+        OUTLINECOLOR 205 199 199
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Denudativo"
+      EXPRESSION ('[origen]'eq'Denudativo')
+      STYLE
+        COLOR 193 171 142
+        OUTLINECOLOR 193 171 142
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Estructural"
+      EXPRESSION ('[origen]'eq'Estructural')
+      STYLE
+        COLOR 223 249 188
+        OUTLINECOLOR 223 249 188
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Fluvial"
+      EXPRESSION ('[origen]'eq'Fluvial')
+      STYLE
+        COLOR 112 205 239
+        OUTLINECOLOR 112 205 239
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Glaciar"
+      EXPRESSION ('[origen]'eq'Glaciar')
+      STYLE
+        COLOR 177 236 222
+        OUTLINECOLOR 177 236 222
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Lagunar"
+      EXPRESSION ('[origen]'eq'Lagunar')
+      STYLE
+        COLOR 112 163 179
+        OUTLINECOLOR 112 163 179
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Mixto"
+      EXPRESSION ('[origen]'eq'Mixto')
+      STYLE
+        COLOR 242 192 142
+        OUTLINECOLOR 242 192 142
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

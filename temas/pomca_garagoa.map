@@ -4,32 +4,42 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from o_cauce using unique id using srid=4326"
+    DATA "geom from p_r_garagoa using unique gid using srid=4326"
     METADATA
       "cache"	"nao"
       "CLASSE"	"SIM"
-      "permitekmz"	"nao"
+      "permitekmz"	"sim"
       "permitedownload"	"sim"
       "download"	"sim"
-      "permitekml"	"sim"
       "permiteogc"	"sim"
-      "tema"	"Ocupaci�n de Cauces Autorizados"
+      "permitekml"	"sim"
+      "tema"	"POMCA Rio Garagoa"
       "cortepixels"	"0"
     END # METADATA
-    NAME "ocauce"
+    NAME "pomca_garagoa"
     PROCESSING "LABEL_NO_CLIP=True"
     PROCESSING "POLYLINE_NO_CLIP=True"
     STATUS DEFAULT
     TEMPLATE "none.htm"
     TILEITEM "location"
-    TYPE POINT
+    OPACITY 90
+    TYPE POLYGON
     UNITS METERS
     CLASS
-      NAME "OC Autorizado"
+      NAME "Conservación y Protección Ambiental"
+      EXPRESSION ('[cat_ord__1]'eq'01')
       STYLE
-        COLOR 46 157 253
-        SIZE 12
-        SYMBOL "google1"
+        COLOR 17 191 23
+        OUTLINECOLOR 17 191 23
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Uso Múltiple"
+      EXPRESSION ('[cat_ord__1]'eq'02')
+      STYLE
+        COLOR 244 219 118
+        OUTLINECOLOR 244 219 118
       END # STYLE
       TITLE ""
     END # CLASS

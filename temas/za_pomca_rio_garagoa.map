@@ -1,0 +1,170 @@
+MAP
+  FONTSET "../symbols/fontes.txt"
+  SYMBOLSET "../symbols/simbolosv6.sym"
+  LAYER
+    CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
+    CONNECTIONTYPE POSTGIS
+    DATA "geom from za_componente_fc using unique gid using srid=4326"
+    METADATA
+      "cache"	"nao"
+      "CLASSE"	"SIM"
+      "olopacity"	""
+      "permitekmz"	"sim"
+      "gmopacity"	""
+      "gmstatus"	""
+      "arquivotemaoriginal"	""
+      "nomeoriginal"	""
+      "olstatus"	""
+      "permitedownload"	"sim"
+      "FILTROORIGINAL"	""
+      "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
+      "download"	"sim"
+      "permitekml"	"sim"
+      "permiteogc"	"sim"
+      "tema"	"Zonificaci髇 Ambiental POMCA R韔 Garagoa"
+      "cortepixels"	"0"
+    END # METADATA
+    NAME "za_pomca_rio_garagoa"
+    PROCESSING "LABEL_NO_CLIP=True"
+    PROCESSING "POLYLINE_NO_CLIP=True"
+    STATUS DEFAULT
+    TEMPLATE "none.htm"
+    TILEITEM "location"
+    OPACITY 90
+    TYPE POLYGON
+    UNITS METERS
+    CLASS
+      NAME "Areas SINAP"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas SINAP')
+      STYLE
+        COLOR 0 139 69
+        OUTLINECOLOR 0 139 69
+        SIZE 1e-06
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas de importancia Ambiental"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas de importancia Ambiental')
+      STYLE
+        COLOR 105 139 34
+        OUTLINECOLOR 105 139 34
+        SIZE 1e-07
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas complementarias para la Conservaci贸n"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas complementarias para la conservacion')
+      STYLE
+        COLOR 188 238 104
+        OUTLINECOLOR 188 238 104
+        SIZE 1e-08
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas de Restauraci贸n Ecol贸gica"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas de Restauracion Ecologica')
+      STYLE
+        COLOR 255 165 0
+        OUTLINECOLOR 255 165 0
+        SIZE 1e-07
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas de Rehabilitaci贸n"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas de Rehabilitacion')
+      STYLE
+        COLOR 238 201 0
+        OUTLINECOLOR 238 201 0
+        SIZE 1e-06
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas de Amenazas Naturales"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas de Amenazas Naturales')
+      STYLE
+        COLOR 205 0 0
+        OUTLINECOLOR 205 0 0
+        SIZE 0.0001
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas de Recuperaci贸n para el Uso M煤ltiple"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas de Recuperacion para el Uso Multiple')
+      STYLE
+        COLOR 255 69 0
+        OUTLINECOLOR 255 69 0
+        SIZE 1e-05
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas Agr铆colas"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas Agricolas')
+      STYLE
+        COLOR 139 105 20
+        OUTLINECOLOR 139 105 20
+        SIZE 1e-05
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas Agrosilvopastor铆les"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas Agrosilvopastoriles')
+      STYLE
+        COLOR 205 190 112
+        OUTLINECOLOR 205 190 112
+        SIZE 1e-06
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas Agrosilvopastoriles (Condicionadas)"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas Agrosilvopastoriles (Condicionadas)')
+      STYLE
+        COLOR 255 246 143
+        OUTLINECOLOR 255 246 143
+        SIZE 1e-06
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas Agr铆colas (Condicionadas)"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas Agricolas (Condicionadas)')
+      STYLE
+        COLOR 205 173 0
+        OUTLINECOLOR 205 173 0
+        SIZE 1e-05
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas con Reglamentacion Especial"
+      EXPRESSION (('[sub_zuso_m]' = 'Areas con reglamentacion especial'))
+      STYLE
+        COLOR 77 77 230
+        OUTLINECOLOR 0 139 69
+        SIZE 1e-06
+      END # STYLE
+      TITLE ""
+    END # CLASS
+    CLASS
+      NAME "Areas Urbanas, Municipales y Distritales"
+      EXPRESSION ('[sub_zuso_m]'eq'Areas Urbanas, Municipales y Distritales')
+      STYLE
+        COLOR 236 238 243
+        OUTLINECOLOR 236 238 243
+        SIZE 1e-06
+      END # STYLE
+      TITLE ""
+    END # CLASS
+  END # LAYER
+
+END # MAP
+

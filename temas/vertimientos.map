@@ -4,7 +4,7 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "the_geom from residuos_solidos using unique gid using srid=4326"
+    DATA "geom from vertimientos_sirh using unique gid using srid=4326"
     METADATA
       "METAESTAT_ID_MEDIDA_VARIAVEL"	""
       "cache"	"nao"
@@ -13,66 +13,59 @@ MAP
       "permitekmz"	"sim"
       "gmopacity"	""
       "gmstatus"	""
-      "iconetema"	""
       "METAESTAT_CODIGO_TIPO_REGIAO"	""
       "arquivotemaoriginal"	""
-      "mensagem"	"Residuos Sólidos"
       "olstatus"	""
       "nomeoriginal"	""
       "permitedownload"	"sim"
       "FILTROORIGINAL"	""
-      "PLUGINI3GEO"	""
       "DATAORIGINAL"	""
+      "PLUGINI3GEO"	""
       "metaestat"	""
       "download"	"sim"
-      "permiteogc"	"sim"
       "permitekml"	"sim"
-      "tema"	"Residuos Sólidos"
+      "permiteogc"	"sim"
+      "tema"	"Vertimientos"
       "cortepixels"	"0"
-      "storymap"	""
     END # METADATA
-    NAME "residuos_solidos"
+    NAME "vertimientos"
     PROCESSING "LABEL_NO_CLIP=True"
     PROCESSING "POLYLINE_NO_CLIP=True"
     STATUS DEFAULT
     TEMPLATE "none.htm"
     TILEITEM "location"
-    OPACITY 80
-    TYPE POLYGON
+    TYPE POINT
     UNITS METERS
     CLASS
-      NAME "Planta Garagoa"
-      EXPRESSION ('[sitio_f]'eq'Planta Garagoa')
+      NAME "Residual industrial"
+      EXPRESSION ('[t_vert]'eq'Residual industrial')
       STYLE
-        COLOR 80 129 14
+        COLOR 23 30 240
         OUTLINECOLOR 255 255 255
+        SIZE 15
+        SYMBOL "ponto"
       END # STYLE
       TITLE ""
     END # CLASS
     CLASS
-      NAME "Planta Pirgua"
-      EXPRESSION ('[sitio_f]'eq'Planta Pirgua')
+      NAME "Residual domestico"
+      EXPRESSION ('[t_vert]'eq'Residual domestico')
       STYLE
-        COLOR 232 189 46
+        COLOR 44 203 235
         OUTLINECOLOR 255 255 255
+        SIZE 10
+        SYMBOL "ponto"
       END # STYLE
       TITLE ""
     END # CLASS
     CLASS
-      NAME "Planta Villavicencio"
-      EXPRESSION ('[sitio_f]'eq'Planta Villavicencio')
+      NAME "Municipal"
+      EXPRESSION ('[t_vert]'eq'Municipal')
       STYLE
-        COLOR 78 16 16
+        COLOR 242 28 28
         OUTLINECOLOR 255 255 255
-      END # STYLE
-      TITLE ""
-    END # CLASS
-    CLASS
-      NAME "Planta Villanueva"
-      EXPRESSION ('[sitio_f]'eq'Planta Villanueva')
-      STYLE
-        COLOR 189 83 83
-        OUTLINECOLOR 255 255 255
+        SIZE 6
+        SYMBOL "ponto"
       END # STYLE
       TITLE ""
     END # CLASS

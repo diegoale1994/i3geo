@@ -4,7 +4,7 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "geom from vias_igac_inviasX using unique gid using srid=4326"
+    DATA "geom from vias_igac_invias using unique gid using srid=4326"
     METADATA
       "cache"	"nao"
       "CLASSE"	"SIM"

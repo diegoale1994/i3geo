@@ -6,14 +6,17 @@ MAP
     CONNECTIONTYPE POSTGIS
     DATA "geom from defor_2012_2014 using unique gid using srid=4326"
     METADATA
+      "METAESTAT_ID_MEDIDA_VARIAVEL"	""
       "cache"	"nao"
       "CLASSE"	"SIM"
       "permitekmz"	"sim"
+      "METAESTAT_CODIGO_TIPO_REGIAO"	""
       "mensagem"	"Deforestación (2012 - 2014)"
       "permitedownload"	"sim"
+      "metaestat"	""
       "download"	"sim"
-      "permitekml"	"sim"
       "permiteogc"	"sim"
+      "permitekml"	"sim"
       "tema"	"Deforestación (2012 - 2014)"
       "cortepixels"	"0"
     END # METADATA
@@ -34,4 +37,6 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
+
 END # MAP
+

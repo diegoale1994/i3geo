@@ -12,8 +12,8 @@ MAP
       "mensagem"	"Deforestación (2000 - 2005)"
       "permitedownload"	"nao"
       "download"	"nao"
-      "permitekml"	"sim"
       "permiteogc"	"sim"
+      "permitekml"	"sim"
       "tema"	"Deforestación (2000 - 2005)"
       "cortepixels"	"0"
     END # METADATA
@@ -35,4 +35,6 @@ MAP
       TITLE ""
     END # CLASS
   END # LAYER
+
 END # MAP
+

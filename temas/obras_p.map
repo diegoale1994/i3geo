@@ -4,7 +4,7 @@ MAP
   LAYER
     CONNECTION "password=sigweb2013 user=sigweb dbname=web_sig host=localhost port=5432"
     CONNECTIONTYPE POSTGIS
-    DATA "the_geom from obras_prevencion using unique gid using srid=4326"
+    DATA "geom from obras_mitigacion using unique id using srid=4326"
     METADATA
       "cache"	"nao"
       "CLASSE"	"SIM"
